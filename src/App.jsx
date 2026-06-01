@@ -969,6 +969,44 @@ function Footer({ navigate }) {
         <div style={{ borderTop: `1px solid ${THEME.gold}30`, borderBottom: `1px solid ${THEME.gold}30`, padding: "1.2rem", textAlign: "center", marginBottom: "1.5rem", background: `${THEME.gold}08` }}>
           <p style={{ color: THEME.gold, margin: 0, fontStyle: "italic", fontSize: "0.95rem" }}>✨ आज ही संपर्क करें और अपने हुनर को दें एक नई पहचान</p>
         </div>
+        {/* ── SEO KEYWORD SECTION — visible for crawlers ── */}
+        <div style={{ borderTop: `1px solid ${THEME.gold}20`, paddingTop: "1.5rem", marginBottom: "1.5rem" }}>
+          <p style={{ color: THEME.textMuted, fontSize: "0.78rem", textAlign: "center", marginBottom: 10, letterSpacing: 0.5 }}>
+            हमारी सेवाएं क्षेत्र | Our Services & Coverage
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center" }}>
+            {[
+              "जय माँ अम्बे फाइबर वर्कशॉप",
+              "Jai Maa Ambe Fiber Workshop",
+              "माँ अम्बे फाइबर मुजफ्फरपुर",
+              "Maa Ambe Fiber Muzaffarpur",
+              "अम्बे फाइबर वर्कशॉप",
+              "Ambe Fiber Workshop Bihar",
+              "शादी स्टेज मुजफ्फरपुर",
+              "Wedding Stage Muzaffarpur",
+              "MS लोहे डेकोर बिहार",
+              "MS Iron Decoration Bihar",
+              "LED डेकोर मुजफ्फरपुर",
+              "फाइबर प्लेग्राउंड बिहार",
+              "हल्दी टब निर्माता",
+              "Haldi Tub Manufacturer",
+              "रणधीर कुमार मुजफ्फरपुर",
+              "Randhir Kumar Muzaffarpur",
+              "इवेंट डेकोर बिहार",
+              "Event Decor Bihar",
+            ].map((tag, i) => (
+              <span key={i} style={{
+                background: `${THEME.gold}10`,
+                border: `1px solid ${THEME.gold}25`,
+                borderRadius: 999,
+                padding: "3px 10px",
+                fontSize: "0.72rem",
+                color: THEME.textMuted,
+              }}>{tag}</span>
+            ))}
+          </div>
+        </div>
+
         <p style={{ color: THEME.textMuted, textAlign: "center", margin: 0, fontSize: "0.85rem" }}>© 2024 जय माँ अम्बे फाइबर वर्कशॉप | सर्वाधिकार सुरक्षित | रणधीर कुमार</p>
       </div>
     </footer>
