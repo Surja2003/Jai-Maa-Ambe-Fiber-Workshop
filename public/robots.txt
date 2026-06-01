@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block build artifacts
+Disallow: /src/
+Disallow: /.vite/
+
+# Sitemap
+Sitemap: https://jai-maa-ambe-fiber-workshop.vercel.app/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 10
