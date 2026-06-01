@@ -62,6 +62,12 @@ function Navbar({ navigate, currentPage }) {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Lock body scroll when menu open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : ""
+    return () => { document.body.style.overflow = "" }
+  }, [menuOpen])
+
   const links = [
     { label: "होम", page: "home" },
     { label: "हमारे बारे में", page: "about" },
@@ -74,8 +80,9 @@ function Navbar({ navigate, currentPage }) {
   const handleNav = (page) => { navigate(page); setMenuOpen(false) }
 
   return (
+    <>
     <nav style={{
-      position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 900,
       background: "rgba(13,5,0,0.97)", backdropFilter: "blur(12px)",
       borderBottom: `2px solid ${THEME.gold}`,
       boxShadow: scrolled ? "0 4px 32px rgba(201,168,76,0.18)" : "none",
@@ -111,35 +118,114 @@ function Navbar({ navigate, currentPage }) {
           ))}
         </div>
 
-        <button className="flex md:hidden" onClick={() => setMenuOpen(!menuOpen)} style={{
-          background: "none", border: `1px solid ${THEME.gold}`, borderRadius: 8,
-          color: THEME.gold, padding: 8, cursor: "pointer",
-        }}>
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        {/* Hamburger Button */}
+        <button
+          className="flex md:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="मेनू खोलें"
+          style={{
+            background: menuOpen ? `${THEME.gold}22` : "none",
+            border: `1.5px solid ${THEME.gold}`,
+            borderRadius: 10,
+            color: THEME.gold,
+            cursor: "pointer",
+            display: "flex",
+            flexDirection: "column",
+            gap: 5,
+            alignItems: "center",
+            justifyContent: "center",
+            width: 44, height: 44,
+            transition: "all 0.2s",
+          }}
+        >
+          {menuOpen ? <X size={22} /> : (
+            <div style={{ display: "flex", flexDirection: "column", gap: 5, alignItems: "center" }}>
+              <span style={{ display: "block", width: 22, height: 2, background: THEME.gold, borderRadius: 2 }} />
+              <span style={{ display: "block", width: 16, height: 2, background: THEME.gold, borderRadius: 2 }} />
+              <span style={{ display: "block", width: 22, height: 2, background: THEME.gold, borderRadius: 2 }} />
+            </div>
+          )}
         </button>
       </div>
+    </nav>
 
-      {menuOpen && (
-        <div style={{
-          position: "fixed", top: 70, left: 0, right: 0, bottom: 0,
-          background: "rgba(13,5,0,0.98)", zIndex: 100,
-          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-          gap: 8, padding: "2rem",
-        }}>
-          {links.map(l => (
-            <button key={l.page} onClick={() => handleNav(l.page)} style={{
-              background: currentPage === l.page ? `${THEME.gold}22` : "none",
-              border: `1px solid ${currentPage === l.page ? THEME.gold : "transparent"}`,
-              borderRadius: 12, cursor: "pointer",
-              color: currentPage === l.page ? THEME.goldLight : THEME.textMuted,
-              fontWeight: currentPage === l.page ? 700 : 500,
-              fontSize: "1.2rem", padding: "14px 48px",
-              width: "100%", maxWidth: 320, fontFamily: "'Hind', sans-serif",
-            }}>{l.label}</button>
+    {/* ── MOBILE FULL-SCREEN OVERLAY ── */}
+    {menuOpen && (
+      <div style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 9999,
+        background: "rgba(8,2,0,0.97)",
+        backdropFilter: "blur(16px)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "1.5rem",
+        overflowY: "auto",
+      }}>
+        {/* X Close */}
+        <button
+          onClick={() => setMenuOpen(false)}
+          style={{
+            position: "absolute", top: 18, right: 18,
+            background: `${THEME.gold}22`,
+            border: `1.5px solid ${THEME.gold}`,
+            borderRadius: "50%",
+            width: 50, height: 50,
+            display: "flex", alignItems: "center", justifyContent: "center",
+            cursor: "pointer", color: THEME.gold,
+          }}
+        ><X size={24} /></button>
+
+        {/* Logo */}
+        <img src="assets/logo.png" alt="लोगो" style={{ width: 80, height: 80, borderRadius: "50%", border: `3px solid ${THEME.gold}`, objectFit: "cover", boxShadow: `0 0 30px ${THEME.gold}60`, marginBottom: 10 }} />
+        <div style={{ color: THEME.goldLight, fontFamily: "'Tiro Devanagari Hindi', serif", fontSize: "1.05rem", fontWeight: 700 }}>जय माँ अम्बे</div>
+        <div style={{ color: THEME.textMuted, fontSize: "0.78rem", marginBottom: 24 }}>फाइबर वर्कशॉप</div>
+
+        {/* Gold divider */}
+        <div style={{ width: 100, height: 1, background: `linear-gradient(90deg,transparent,${THEME.gold},transparent)`, marginBottom: 24 }} />
+
+        {/* Nav Links */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 12, width: "100%", maxWidth: 310 }}>
+          {links.map((l) => (
+            <button
+              key={l.page}
+              onClick={() => handleNav(l.page)}
+              style={{
+                background: currentPage === l.page ? `${THEME.gold}22` : "transparent",
+                border: `1.5px solid ${currentPage === l.page ? THEME.gold : THEME.gold + "40"}`,
+                borderRadius: 14,
+                cursor: "pointer",
+                color: currentPage === l.page ? THEME.goldLight : THEME.textMuted,
+                fontWeight: currentPage === l.page ? 700 : 500,
+                fontSize: "1.1rem",
+                padding: "15px 0",
+                width: "100%",
+                fontFamily: "'Hind', sans-serif",
+                transition: "all 0.18s",
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = `${THEME.gold}22`; e.currentTarget.style.borderColor = THEME.gold; e.currentTarget.style.color = THEME.goldLight }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = currentPage === l.page ? `${THEME.gold}22` : "transparent"
+                e.currentTarget.style.borderColor = currentPage === l.page ? THEME.gold : `${THEME.gold}40`
+                e.currentTarget.style.color = currentPage === l.page ? THEME.goldLight : THEME.textMuted
+              }}
+            >{l.label}</button>
           ))}
         </div>
-      )}
-    </nav>
+
+        {/* Call CTA */}
+        <a href="tel:9102556441" style={{
+          display: "inline-flex", alignItems: "center", gap: 10,
+          background: `linear-gradient(135deg,${THEME.goldLight},${THEME.gold})`,
+          color: "#0d0500", fontWeight: 700, fontSize: "1rem",
+          padding: "13px 32px", borderRadius: 999, textDecoration: "none",
+          boxShadow: `0 4px 20px ${THEME.gold}50`, marginTop: 28,
+        }}>📞 9102556441</a>
+      </div>
+    )}
+    </>
   )
 }
 
