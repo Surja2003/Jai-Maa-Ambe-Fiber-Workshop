@@ -18,35 +18,73 @@ const THEME = {
 
 // ─── IMAGE PATHS ──────────────────────────────────────────────────────────────
 const IMG = {
-  owner:    "assets/owner.jpeg",
-  heroBg:   "assets/WhatsApp Image 2026-06-01 at 19.41.02.jpeg",
-  flyer:    "assets/A.jpeg",
-  // Stage / Wedding
-  stage1:   "assets/WhatsApp Image 2026-06-01 at 19.41.02.jpeg",
-  stage2:   "assets/WhatsApp Image 2026-06-01 at 19.41.03 (2).jpeg",
-  stage3:   "assets/WhatsApp Image 2026-06-01 at 19.41.03.jpeg",
-  stage4:   "assets/WhatsApp Image 2026-06-01 at 19.41.00 (1).jpeg",
-  stage5:   "assets/WhatsApp Image 2026-06-01 at 19.41.00 (2).jpeg",
-  stage6:   "assets/WhatsApp Image 2026-06-01 at 19.41.00.jpeg",
-  stage7:   "assets/WhatsApp Image 2026-06-01 at 19.41.03 (1).jpeg",
-  // LED Decor
-  led1:     "assets/WhatsApp Image 2026-06-01 at 19.40.59 (1).jpeg",
-  led2:     "assets/WhatsApp Image 2026-06-01 at 19.40.59.jpeg",
-  led3:     "assets/WhatsApp Image 2026-06-01 at 19.40.59 (2).jpeg",
-  led4:     "assets/WhatsApp Image 2026-06-01 at 19.41.01 (2).jpeg",
-  led5:     "assets/WhatsApp Image 2026-06-01 at 19.40.58.jpeg",
-  // Fiber Products
-  fiber1:   "assets/WhatsApp Image 2026-06-01 at 19.40.52 (1).jpeg",
-  fiber2:   "assets/WhatsApp Image 2026-06-01 at 19.40.52.jpeg",
-  fiber3:   "assets/WhatsApp Image 2026-06-01 at 19.40.57 (1).jpeg",
-  fiber4:   "assets/WhatsApp Image 2026-06-01 at 19.40.57 (2).jpeg",
-  fiber5:   "assets/WhatsApp Image 2026-06-01 at 19.40.54 (1).jpeg",
-  fiber6:   "assets/WhatsApp Image 2026-06-01 at 19.40.55.jpeg",
-  fiber7:   "assets/WhatsApp Image 2026-06-01 at 19.40.56.jpeg",
-  fiber8:   "assets/WhatsApp Image 2026-06-01 at 19.40.56 (1).jpeg",
-  // MS Iron / Furniture
-  ms1:      "assets/WhatsApp Image 2026-06-01 at 19.40.53.jpeg",
-  ms2:      "assets/WhatsApp Image 2026-06-01 at 19.40.53 (2).jpeg",
+  // Logos
+  logoOfficial: "assets/logo1.jpeg",   // New official JM Fiber Workshop logo
+  logoElegant:  "assets/logo.png",     // Elegant Jai Maa Ambe logo (used in About hero)
+
+  // People
+  owner:   "assets/owner.jpeg",
+
+  // Hero / Flyer
+  heroBg:  "assets/WhatsApp Image 2026-06-01 at 19.41.02.jpeg",
+  flyer:   "assets/A.jpeg",
+
+  // ── STAGE DECOR ──
+  stage1:  "assets/WhatsApp Image 2026-06-03 at 11.12.09.jpeg",   // Grand wedding stage (night, green lights)
+  stage2:  "assets/WhatsApp Image 2026-06-03 at 11.12.12.jpeg", // Gold mandap with flowers
+  stage3:  "assets/WhatsApp Image 2026-06-03 at 11.12.16 (2).jpeg", // Wedding mandap arch tree MS
+  stage4:  "assets/WhatsApp Image 2026-06-01 at 19.41.00 (1).jpeg", // Stage tree pillar
+  stage5:  "assets/WhatsApp Image 2026-06-01 at 19.41.00 (2).jpeg", // Stage lotus backdrop
+  stage6:  "assets/WhatsApp Image 2026-06-01 at 19.41.00.jpeg",   // Gold flower centerpiece
+  stage7:  "assets/WhatsApp Image 2026-06-01 at 19.41.03.jpeg",   // Arch venue
+  stage8:  "assets/WhatsApp Image 2026-06-01 at 19.41.02.jpeg",   // Stage wedding
+  stage9:  "assets/WhatsApp Image 2026-06-01 at 19.41.03 (2).jpeg", // Rajasthani stage
+
+  // ── LED DECOR ──
+  led1:    "assets/WhatsApp Image 2026-06-03 at 11.12.14.jpeg",   // LED neon feather
+  led2:    "assets/WhatsApp Image 2026-06-03 at 11.12.15 (1).jpeg", // LED neon panel
+  led3:    "assets/WhatsApp Image 2026-06-03 at 11.12.15 (2).jpeg", // LED star neon
+  led4:    "assets/WhatsApp Image 2026-06-03 at 11.12.16 (1).jpeg", // LED circles neon
+  led5:    "assets/WhatsApp Image 2026-06-03 at 11.12.17 (2).jpeg", // LED swan heart backdrop
+  led6:    "assets/WhatsApp Image 2026-06-01 at 19.40.59 (1).jpeg", // LED heart backdrop
+  led7:    "assets/WhatsApp Image 2026-06-01 at 19.40.59.jpeg",   // LED mandal
+  led8:    "assets/WhatsApp Image 2026-06-01 at 19.40.58.jpeg",   // LED star
+
+  // ── FIBER PRODUCTS / HALDI TUB ──
+  fiber1:  "assets/WhatsApp Image 2026-06-03 at 11.12.09 (1).jpeg", // Haldi tub open top
+  fiber2:  "assets/WhatsApp Image 2026-06-03 at 11.12.09 (2).jpeg", // Haldi tub cylindrical
+  fiber3:  "assets/WhatsApp Image 2026-06-03 at 11.12.09 (3).jpeg", // Haldi tub dark room
+  fiber4:  "assets/WhatsApp Image 2026-06-03 at 11.12.22.jpeg",   // Haldi tub swan design
+  fiber5:  "assets/WhatsApp Image 2026-06-01 at 19.40.52 (1).jpeg", // Fiber playground set
+  fiber6:  "assets/WhatsApp Image 2026-06-01 at 19.40.52.jpeg",   // Double slide playground
+  fiber7:  "assets/WhatsApp Image 2026-06-01 at 19.40.57 (1).jpeg", // Covered playground
+  fiber8:  "assets/WhatsApp Image 2026-06-01 at 19.40.57 (2).jpeg", // Outdoor playground
+
+  // ── MS IRON ──
+  ms1:     "assets/WhatsApp Image 2026-06-03 at 11.12.15.jpeg",   // MS iron decorative frames
+  ms2:     "assets/WhatsApp Image 2026-06-03 at 11.12.17.jpeg",   // MS iron mandap
+  ms3:     "assets/WhatsApp Image 2026-06-01 at 19.40.53.jpeg",   // School desk-bench
+  ms4:     "assets/WhatsApp Image 2026-06-01 at 19.40.53 (2).jpeg", // Desk-chair set
+  ms5:     "assets/WhatsApp Image 2026-06-01 at 19.40.54 (1).jpeg", // Activity table set
+  ms6:     "assets/WhatsApp Image 2026-06-01 at 19.40.56.jpeg",   // Fiber chair set
+
+  // ── SCHOOL FIBER WORK ──
+  school1: "assets/WhatsApp Image 2026-06-03 at 11.12.22 (1).jpeg", // Fiber pillars white classic
+  school2: "assets/WhatsApp Image 2026-06-03 at 11.12.22 (2).jpeg", // Fiber pillars colored
+  school3: "assets/WhatsApp Image 2026-06-03 at 11.12.13 (2).jpeg", // Buddha fiber art panel
+  school4: "assets/WhatsApp Image 2026-06-03 at 11.12.14 (1).jpeg", // Buddha painted close
+  school5: "assets/WhatsApp Image 2026-06-03 at 11.12.14 (2).jpeg", // Buddha installed at school gate
+  school6: "assets/WhatsApp Image 2026-06-03 at 11.12.13 (1).jpeg", // Surya fiber statue workshop
+  school7: "assets/WhatsApp Image 2026-06-01 at 19.40.55.jpeg",   // Lecture chair row
+  school8: "assets/WhatsApp Image 2026-06-01 at 19.40.56 (1).jpeg", // Doraemon dustbin
+
+  // ── PLAYGROUND ──
+  play1:   "assets/WhatsApp Image 2026-06-01 at 19.40.52 (1).jpeg", // Multi playground set
+  play2:   "assets/WhatsApp Image 2026-06-01 at 19.40.52.jpeg",   // Double slide
+  play3:   "assets/WhatsApp Image 2026-06-01 at 19.40.57 (1).jpeg", // Covered playground
+  play4:   "assets/WhatsApp Image 2026-06-01 at 19.40.57 (2).jpeg", // Outdoor playground
+  play5:   "assets/WhatsApp Image 2026-06-01 at 19.40.58.jpeg",   // Activity playground
+  play6:   "assets/WhatsApp Image 2026-06-01 at 19.40.59 (2).jpeg", // LED cube playground light
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -62,7 +100,6 @@ function Navbar({ navigate, currentPage }) {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Lock body scroll when menu open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : ""
     return () => { document.body.style.overflow = "" }
@@ -91,8 +128,9 @@ function Navbar({ navigate, currentPage }) {
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
         <button onClick={() => handleNav("home")} style={{ background: "none", border: "none", cursor: "pointer", textAlign: "left", display: "flex", alignItems: "center", gap: 10 }}>
           <img
-            src="assets/logo.png"
+            src={IMG.logoOfficial}
             alt="जय माँ अम्बे फाइबर वर्कशॉप लोगो"
+            loading="eager"
             style={{ height: 48, width: 48, borderRadius: "50%", objectFit: "cover", border: `2px solid ${THEME.gold}`, boxShadow: `0 0 10px ${THEME.gold}60` }}
           />
           <span style={{ lineHeight: 1.2, textAlign: "left" }}>
@@ -118,7 +156,7 @@ function Navbar({ navigate, currentPage }) {
           ))}
         </div>
 
-        {/* Hamburger Button */}
+        {/* Hamburger */}
         <button
           className="flex md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -149,62 +187,39 @@ function Navbar({ navigate, currentPage }) {
       </div>
     </nav>
 
-    {/* ── MOBILE FULL-SCREEN OVERLAY ── */}
+    {/* Mobile Overlay */}
     {menuOpen && (
       <div style={{
-        position: "fixed",
-        inset: 0,
-        zIndex: 9999,
-        background: "rgba(8,2,0,0.97)",
-        backdropFilter: "blur(16px)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "1.5rem",
-        overflowY: "auto",
+        position: "fixed", inset: 0, zIndex: 9999,
+        background: "rgba(8,2,0,0.97)", backdropFilter: "blur(16px)",
+        display: "flex", flexDirection: "column",
+        alignItems: "center", justifyContent: "center",
+        padding: "1.5rem", overflowY: "auto",
       }}>
-        {/* X Close */}
-        <button
-          onClick={() => setMenuOpen(false)}
-          style={{
-            position: "absolute", top: 18, right: 18,
-            background: `${THEME.gold}22`,
-            border: `1.5px solid ${THEME.gold}`,
-            borderRadius: "50%",
-            width: 50, height: 50,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            cursor: "pointer", color: THEME.gold,
-          }}
-        ><X size={24} /></button>
+        <button onClick={() => setMenuOpen(false)} style={{
+          position: "absolute", top: 18, right: 18,
+          background: `${THEME.gold}22`, border: `1.5px solid ${THEME.gold}`,
+          borderRadius: "50%", width: 50, height: 50,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          cursor: "pointer", color: THEME.gold,
+        }}><X size={24} /></button>
 
-        {/* Logo */}
-        <img src="assets/logo.png" alt="लोगो" style={{ width: 80, height: 80, borderRadius: "50%", border: `3px solid ${THEME.gold}`, objectFit: "cover", boxShadow: `0 0 30px ${THEME.gold}60`, marginBottom: 10 }} />
+        <img src={IMG.logoOfficial} alt="लोगो" loading="lazy" style={{ width: 80, height: 80, borderRadius: "50%", border: `3px solid ${THEME.gold}`, objectFit: "cover", boxShadow: `0 0 30px ${THEME.gold}60`, marginBottom: 10 }} />
         <div style={{ color: THEME.goldLight, fontFamily: "'Tiro Devanagari Hindi', serif", fontSize: "1.05rem", fontWeight: 700 }}>जय माँ अम्बे</div>
         <div style={{ color: THEME.textMuted, fontSize: "0.78rem", marginBottom: 24 }}>फाइबर वर्कशॉप</div>
-
-        {/* Gold divider */}
         <div style={{ width: 100, height: 1, background: `linear-gradient(90deg,transparent,${THEME.gold},transparent)`, marginBottom: 24 }} />
 
-        {/* Nav Links */}
         <div style={{ display: "flex", flexDirection: "column", gap: 12, width: "100%", maxWidth: 310 }}>
           {links.map((l) => (
-            <button
-              key={l.page}
-              onClick={() => handleNav(l.page)}
-              style={{
-                background: currentPage === l.page ? `${THEME.gold}22` : "transparent",
-                border: `1.5px solid ${currentPage === l.page ? THEME.gold : THEME.gold + "40"}`,
-                borderRadius: 14,
-                cursor: "pointer",
-                color: currentPage === l.page ? THEME.goldLight : THEME.textMuted,
-                fontWeight: currentPage === l.page ? 700 : 500,
-                fontSize: "1.1rem",
-                padding: "15px 0",
-                width: "100%",
-                fontFamily: "'Hind', sans-serif",
-                transition: "all 0.18s",
-              }}
+            <button key={l.page} onClick={() => handleNav(l.page)} style={{
+              background: currentPage === l.page ? `${THEME.gold}22` : "transparent",
+              border: `1.5px solid ${currentPage === l.page ? THEME.gold : THEME.gold + "40"}`,
+              borderRadius: 14, cursor: "pointer",
+              color: currentPage === l.page ? THEME.goldLight : THEME.textMuted,
+              fontWeight: currentPage === l.page ? 700 : 500,
+              fontSize: "1.1rem", padding: "15px 0", width: "100%",
+              fontFamily: "'Hind', sans-serif", transition: "all 0.18s",
+            }}
               onMouseEnter={e => { e.currentTarget.style.background = `${THEME.gold}22`; e.currentTarget.style.borderColor = THEME.gold; e.currentTarget.style.color = THEME.goldLight }}
               onMouseLeave={e => {
                 e.currentTarget.style.background = currentPage === l.page ? `${THEME.gold}22` : "transparent"
@@ -215,7 +230,6 @@ function Navbar({ navigate, currentPage }) {
           ))}
         </div>
 
-        {/* Call CTA */}
         <a href="tel:9102556441" style={{
           display: "inline-flex", alignItems: "center", gap: 10,
           background: `linear-gradient(135deg,${THEME.goldLight},${THEME.gold})`,
@@ -258,14 +272,14 @@ function PageHeader({ title, sub, breadcrumb, navigate }) {
 function HomePage({ navigate }) {
 
   const galleryPreview = [
-    { src: IMG.stage1, caption: "भव्य शादी स्टेज" },
-    { src: IMG.led1,   caption: "LED हार्ट बैकड्रॉप" },
-    { src: IMG.fiber1, caption: "फाइबर प्लेग्राउंड" },
+    { src: IMG.stage1,  caption: "भव्य शादी स्टेज" },
+    { src: IMG.led5,    caption: "LED हार्ट बैकड्रॉप" },
+    { src: IMG.fiber5,  caption: "फाइबर प्लेग्राउंड" },
   ]
 
   const services = [
     { icon: <Wrench size={36} />, title: "MS लोहे के डिज़ाइन", desc: "शादी-विवाह, पार्टी, रिसेप्शन के लिए मजबूत और सुंदर MS लोहे के सजावटी सामान।" },
-    { icon: <Package size={36} />, title: "फाइबर उत्पाद", desc: "प्लेग्राउंड, हल्दी टब, डस्टबिन और अन्य फाइबर उत्पाद — टिकाऊ और आकर्षक।" },
+    { icon: <Package size={36} />, title: "फाइबर उत्पाद", desc: "प्लेग्राउंड, हल्दी टब, स्कूल फर्नीचर और अन्य फाइबर उत्पाद — टिकाऊ और आकर्षक।" },
     { icon: <Palette size={36} />, title: "स्टेज और इवेंट डेकोर", desc: "शादी स्टेज, LED डेकोर और रिसेप्शन बैकड्रॉप — हर आयोजन के लिए।" },
   ]
 
@@ -288,9 +302,8 @@ function HomePage({ navigate }) {
         padding: "100px 1.5rem 3rem",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(13,5,0,0.9) 0%, rgba(50,20,0,0.82) 100%)" }} />
-        <div style={{ position: "absolute", top: "30%", left: 0, right: 0, height: 2, background: `linear-gradient(90deg, transparent, ${THEME.gold}, transparent)`, animation: "shimmer 2.5s ease-in-out infinite", opacity: 0.5 }} />
 
-        <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 820, animation: "fadeInUp 0.8s ease both" }}>
+        <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 820 }}>
           <div style={{ display: "inline-block", border: `1px solid ${THEME.gold}`, borderRadius: 999, padding: "6px 20px", marginBottom: 24, color: THEME.goldLight, fontSize: "0.85rem" }}>
             ✨ मुजफ्फरपुर की नंबर 1 वर्कशॉप
           </div>
@@ -310,10 +323,10 @@ function HomePage({ navigate }) {
               background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`,
               color: "#0d0500", fontWeight: 700, fontSize: "1rem",
               padding: "14px 32px", borderRadius: 999, textDecoration: "none",
-              boxShadow: `0 4px 20px ${THEME.gold}60`, transition: "transform 0.2s, box-shadow 0.2s",
+              boxShadow: `0 4px 20px ${THEME.gold}60`, transition: "transform 0.2s",
             }}
-              onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.boxShadow = `0 8px 30px ${THEME.gold}80` }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = `0 4px 20px ${THEME.gold}60` }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)" }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)" }}
             >📞 अभी कॉल करें</a>
             <button onClick={() => navigate("gallery")} style={{
               display: "inline-flex", alignItems: "center", gap: 8,
@@ -384,7 +397,7 @@ function HomePage({ navigate }) {
               onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.03)"; e.currentTarget.style.borderColor = THEME.gold; e.currentTarget.style.boxShadow = `0 8px 30px ${THEME.gold}40` }}
               onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.borderColor = `${THEME.gold}30`; e.currentTarget.style.boxShadow = "none" }}
             >
-              <img src={img.src} alt={img.caption} style={{ width: "100%", height: 240, objectFit: "cover", display: "block" }} />
+              <img src={img.src} alt={img.caption} loading="lazy" style={{ width: "100%", height: 240, objectFit: "cover", display: "block" }} />
               <div style={{ background: THEME.bgCard, padding: "12px 16px", color: THEME.goldLight, fontWeight: 600 }}>{img.caption}</div>
             </div>
           ))}
@@ -398,31 +411,29 @@ function HomePage({ navigate }) {
         padding: "5rem 1.5rem",
       }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", gap: 48, flexWrap: "wrap", justifyContent: "center" }}>
-          {/* Owner Photo */}
           <div style={{ flexShrink: 0, textAlign: "center" }}>
             <div style={{
               width: 180, height: 180, borderRadius: "50%", overflow: "hidden",
               border: `4px solid ${THEME.gold}`,
               boxShadow: `0 0 30px ${THEME.gold}60, 0 0 60px ${THEME.gold}30`,
-              animation: "pulse-gold 2.5s ease-in-out infinite",
               margin: "0 auto 14px",
             }}>
-              <img src={IMG.owner} alt="रणधीर कुमार — संस्थापक" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={IMG.owner} alt="संस्थापक — जय माँ अम्बे फाइबर वर्कशॉप" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
             <div style={{
               background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`,
               color: "#0d0500", fontWeight: 700, fontSize: "0.95rem",
               padding: "6px 20px", borderRadius: 999, display: "inline-block",
-            }}>रणधीर कुमार</div>
+            }}>संस्थापक एवं मालिक</div>
           </div>
 
-          {/* Bio */}
           <div style={{ flex: 1, minWidth: 260 }}>
             <p style={{ color: THEME.gold, fontSize: "0.85rem", marginBottom: 6, textTransform: "uppercase", letterSpacing: 2 }}>संस्थापक एवं मालिक</p>
-            <h2 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", margin: "0 0 8px" }}>जय माँ अम्बे फाइबर वर्कशॉप</h2>
+            <h2 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", margin: "0 0 4px" }}>Mr. Randhir Kumar</h2>
+            <p style={{ color: THEME.textMuted, fontSize: "0.95rem", margin: "0 0 8px" }}>जय माँ अम्बे फाइबर वर्कशॉप</p>
             <div style={{ width: 60, height: 2, background: THEME.gold, marginBottom: 20 }} />
             <p style={{ color: THEME.textMuted, lineHeight: 1.9, fontSize: "1rem", marginBottom: 24 }}>
-              नमस्कार! मैं रणधीर कुमार हूँ। पिछले <strong style={{ color: THEME.goldLight }}>10+ वर्षों</strong> से मुजफ्फरपुर में
+              नमस्कार! पिछले <strong style={{ color: THEME.goldLight }}>10+ वर्षों</strong> से मुजफ्फरपुर में
               MS लोहे और फाइबर से शादी-विवाह, पार्टी, स्टेज डेकोरेशन और फाइबर उत्पाद बना रहे हैं।
               <br /><strong style={{ color: THEME.goldLight }}>उच्च गुणवत्ता, समय पर डिलीवरी और ग्राहक संतुष्टि</strong> — हमारी पहचान।
             </p>
@@ -498,28 +509,35 @@ function AboutPage({ navigate }) {
     <div>
       <PageHeader title="हमारे बारे में" breadcrumb navigate={navigate} />
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "4rem 1.5rem" }}>
-        {/* Owner Section */}
+
+        {/* Owner Section — only owner photo */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 48, alignItems: "center", marginBottom: "5rem" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
+            {/* Owner Photo only */}
             <div style={{
-              width: 240, height: 240, borderRadius: "50%", overflow: "hidden",
+              width: 260, height: 260, borderRadius: "50%", overflow: "hidden",
               border: `4px solid ${THEME.gold}`,
-              boxShadow: `0 0 30px ${THEME.gold}60, 0 0 60px ${THEME.gold}30`,
-              animation: "pulse-gold 2s ease-in-out infinite",
+              boxShadow: `0 0 40px ${THEME.gold}60, 0 0 80px ${THEME.gold}30`,
             }}>
-              <img src={IMG.owner} alt="रणधीर कुमार — संस्थापक जय माँ अम्बे फाइबर वर्कशॉप" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={IMG.owner} alt="संस्थापक — जय माँ अम्बे फाइबर वर्कशॉप" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
-            <div style={{ background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`, color: "#0d0500", fontWeight: 700, fontSize: "1rem", padding: "8px 24px", borderRadius: 999 }}>रणधीर कुमार</div>
+            <div style={{ background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`, color: "#0d0500", fontWeight: 700, fontSize: "1rem", padding: "8px 24px", borderRadius: 999 }}>संस्थापक एवं मालिक</div>
           </div>
           <div>
-            <p style={{ color: THEME.textMuted, fontSize: "0.9rem", marginBottom: 6 }}>संस्थापक एवं मालिक</p>
-            <h2 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "2.5rem", margin: "0 0 6px" }}>रणधीर कुमार</h2>
-            <p style={{ color: THEME.gold, fontStyle: "italic", fontSize: "1.1rem", marginBottom: "1.5rem" }}>जय माँ अम्बे फाइबर वर्कशॉप</p>
+            <p style={{ color: THEME.textMuted, fontSize: "0.9rem", marginBottom: 6, textTransform: "uppercase", letterSpacing: 2 }}>संस्थापक एवं मालिक</p>
+            <h2 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "2.8rem", margin: "0 0 4px" }}>Mr. Randhir Kumar</h2>
+            <p style={{ color: THEME.textMuted, fontSize: "1rem", marginBottom: 8 }}>जय माँ अम्बे फाइबर वर्कशॉप</p>
+            <p style={{ color: THEME.gold, fontStyle: "italic", fontSize: "1.1rem", marginBottom: "0.5rem" }}>मुजफ्फरपुर, बिहार</p>
+            <p style={{ color: THEME.textMuted, fontSize: "0.92rem", marginBottom: "1.5rem" }}>
+              🏆 10+ वर्षों का अनुभव &nbsp;|&nbsp; 500+ सफल प्रोजेक्ट
+            </p>
             <p style={{ color: THEME.textMuted, lineHeight: 1.9, fontSize: "1rem", marginBottom: "2rem" }}>
-              नमस्कार! मैं रणधीर कुमार हूँ। पिछले कई वर्षों से हम मुजफ्फरपुर में
+              नमस्कार! पिछले कई वर्षों से हम मुजफ्फरपुर में
               MS लोहे और फाइबर से शादी-विवाह, पार्टी, रिसेप्शन और स्टेज डेकोरेशन
               के सामान बना रहे हैं। हमारा उद्देश्य है — उच्च गुणवत्ता, समय पर
               डिलीवरी और हर ग्राहक की संतुष्टि।
+              <br /><br />
+              हम <strong style={{ color: THEME.goldLight }}>स्कूल फर्नीचर, हल्दी टब, प्लेग्राउंड उपकरण, LED डेकोर और भव्य स्टेज</strong> बनाने में विशेषज्ञ हैं।
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               <a href="mailto:Kumarrandhir1313@gmail.com" style={{ display: "flex", alignItems: "center", gap: 10, color: THEME.goldLight, textDecoration: "none", fontSize: "0.95rem" }}>
@@ -528,6 +546,9 @@ function AboutPage({ navigate }) {
               <a href="tel:9102556441" style={{ display: "flex", alignItems: "center", gap: 10, color: THEME.goldLight, textDecoration: "none", fontSize: "0.95rem" }}>
                 <Phone size={18} color={THEME.gold} /> 9102556441
               </a>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, color: THEME.textMuted, fontSize: "0.95rem" }}>
+                <MapPin size={18} color={THEME.gold} /> मुजफ्फरपुर, बिहार, भारत
+              </div>
             </div>
           </div>
         </div>
@@ -567,19 +588,34 @@ function AboutPage({ navigate }) {
 function ServicesPage({ navigate }) {
   const services = [
     {
-      img: IMG.stage4, imgAlt: "स्टेज ट्री पिलर MS लोहे",
-      title: "MS लोहे के डिज़ाइन",
-      points: ["शादी-विवाह, पार्टी, रिसेप्शन के लिए सजावटी सामान", "डिजाइन के अनुसार फैब्रिकेशन और फिनिशिंग", "समय पर डिलीवरी, मजबूत निर्माण", "कस्टम डिज़ाइन उपलब्ध"],
+      img: IMG.stage1, imgAlt: "भव्य शादी स्टेज",
+      emoji: "✨", title: "स्टेज डेकोरेशन", filter: "स्टेज डेकोरेशन",
+      points: ["शादी-विवाह के लिए भव्य स्टेज सजावट", "मण्डप, आर्च और बैकड्रॉप निर्माण", "रिसेप्शन और पार्टी डेकोर सेटअप", "कस्टम डिज़ाइन उपलब्ध"],
     },
     {
-      img: IMG.fiber1, imgAlt: "फाइबर प्लेग्राउंड और उत्पाद",
-      title: "फाइबर उत्पाद",
-      points: ["प्लेग्राउंड उपकरण निर्माण", "हल्दी टब (फाइबर) बनाना", "फाइबर फर्नीचर और डस्टबिन", "मजबूत और टिकाऊ फिनिशिंग"],
+      img: IMG.led5, imgAlt: "LED नियॉन डेकोर",
+      emoji: "💡", title: "LED डेकोर", filter: "LED डेकोर",
+      points: ["LED नियॉन साइनेज और पैनल", "हार्ट, स्टार, मण्डल के डिज़ाइन", "शादी स्टेज और इवेंट के लिए LED बैकड्रॉप", "कमल फूल और स्वान डिज़ाइन वाले LED फ्रेम"],
     },
     {
-      img: IMG.stage1, imgAlt: "भव्य शादी स्टेज इवेंट डेकोर",
-      title: "स्टेज और इवेंट डेकोर",
-      points: ["शादी स्टेज सजावट", "LED और नियॉन डेकोर", "रिसेप्शन बैकड्रॉप", "पूरे इवेंट का सेटअप"],
+      img: IMG.fiber4, imgAlt: "हल्दी टब फाइबर",
+      emoji: "🛁", title: "हल्दी टब", filter: "हल्दी टब",
+      points: ["फाइबर हल्दी टब निर्माण", "हंस, कमल और कस्टम डिज़ाइन", "गोल्डन फिनिश और उच्च गुणवत्ता", "शादी-विवाह के लिए आदर्श"],
+    },
+    {
+      img: IMG.school2, imgAlt: "स्कूल फाइबर वर्क",
+      emoji: "🏫", title: "स्कूल फाइबर वर्क", filter: "स्कूल फाइबर वर्क",
+      points: ["स्तम्भ, मूर्ति और फाइबर आर्ट निर्माण", "स्कूल डेस्क-बेंच और चेयर सेट", "एक्टिविटी टेबल और लेक्चर चेयर", "डस्टबिन और स्कूल सजावट"],
+    },
+    {
+      img: IMG.play1, imgAlt: "फाइबर प्लेग्राउंड",
+      emoji: "⛹️", title: "प्लेग्राउंड", filter: "प्लेग्राउंड",
+      points: ["मल्टी स्लाइड प्लेग्राउंड सेट", "स्कूल और पार्क के लिए आउटडोर सेट", "कवर्ड और डबल स्लाइड स्ट्रक्चर", "मजबूत और रंगीन फाइबर निर्माण"],
+    },
+    {
+      img: IMG.ms1, imgAlt: "MS लोहे के डेकोरेटिव फ्रेम",
+      emoji: "⚒️", title: "MS लोहे", filter: "MS लोहे",
+      points: ["स्टेज, गेट और मण्डप के लिए MS शेप", "डिज़ाइन के अनुसार फैब्रिकेशन", "समय पर डिलीवरी, मजबूत निर्माण", "कस्टम डिज़ाइन उपलब्ध"],
     },
   ]
 
@@ -594,14 +630,17 @@ function ServicesPage({ navigate }) {
     <div>
       <PageHeader title="हमारी सेवाएं" sub="हर आयोजन के लिए बेहतरीन समाधान" breadcrumb navigate={navigate} />
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "4rem 1.5rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 28, marginBottom: "5rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 28, marginBottom: "5rem" }}>
           {services.map((s, i) => (
             <div key={i} style={{ background: THEME.bgCard, borderRadius: 20, overflow: "hidden", border: `1px solid ${THEME.gold}30`, borderTop: `3px solid ${THEME.gold}`, transition: "all 0.3s" }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = THEME.gold; e.currentTarget.style.transform = "translateY(-6px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${THEME.gold}30` }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = `${THEME.gold}30`; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none" }}
             >
               <div style={{ width: "100%", paddingBottom: "56.25%", position: "relative", overflow: "hidden" }}>
-                <img src={s.img} alt={s.imgAlt} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src={s.img} alt={s.imgAlt} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                <div style={{ position: "absolute", top: 12, left: 12, background: "rgba(13,5,0,0.85)", border: `1px solid ${THEME.gold}`, borderRadius: 999, padding: "4px 14px", fontSize: "0.9rem", backdropFilter: "blur(6px)", color: THEME.goldLight, fontWeight: 600 }}>
+                  {s.emoji} {s.title}
+                </div>
               </div>
               <div style={{ padding: "1.8rem" }}>
                 <h3 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "1.4rem", margin: "0 0 1.2rem" }}>{s.title}</h3>
@@ -612,7 +651,10 @@ function ServicesPage({ navigate }) {
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => navigate("contact")} style={{ background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`, color: "#0d0500", fontWeight: 700, padding: "12px 28px", borderRadius: 999, border: "none", cursor: "pointer", width: "100%", fontSize: "0.95rem" }}>📞 ऑर्डर करें</button>
+                <button onClick={() => navigate("gallery", s.filter)} style={{ background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`, color: "#0d0500", fontWeight: 700, padding: "12px 28px", borderRadius: 999, border: "none", cursor: "pointer", width: "100%", fontSize: "0.95rem", transition: "transform 0.2s" }}
+                  onMouseEnter={e => e.currentTarget.style.transform = "scale(1.02)"}
+                  onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+                >🖼️ गैलरी में देखें →</button>
               </div>
             </div>
           ))}
@@ -620,7 +662,7 @@ function ServicesPage({ navigate }) {
 
         {/* Process */}
         <h2 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "2rem", textAlign: "center", marginBottom: "3rem" }}>हम कैसे काम करते हैं?</h2>
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, marginBottom: "4rem" }}>
           {steps.map((st, i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", gap: 16 }}>
               <div style={{ background: THEME.bgCard, border: `2px solid ${THEME.gold}`, borderRadius: 16, padding: "1.5rem 1.8rem", textAlign: "center", minWidth: 150 }}>
@@ -632,47 +674,183 @@ function ServicesPage({ navigate }) {
             </div>
           ))}
         </div>
+
+        {/* CTA */}
+        <div style={{ textAlign: "center", background: `linear-gradient(135deg, #1a0800, #2d1200, #1a0800)`, borderRadius: 20, padding: "3rem 2rem", border: `1px solid ${THEME.gold}40` }}>
+          <h2 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "clamp(1.4rem, 3vw, 2rem)", margin: "0 0 1rem" }}>
+            कोई भी सेवा चाहिए? अभी संपर्क करें!
+          </h2>
+          <p style={{ color: THEME.textMuted, marginBottom: "1.8rem", fontSize: "1rem" }}>Mr. Randhir Kumar — जय माँ अम्बे फाइबर वर्कशॉप, मुजफ्फरपुर</p>
+          <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="tel:9102556441" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`, color: "#0d0500", fontWeight: 700, padding: "14px 32px", borderRadius: 999, textDecoration: "none", fontSize: "1rem", boxShadow: `0 4px 20px ${THEME.gold}60` }}>📞 9102556441</a>
+            <a href="https://wa.me/919102556441" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#25D366", color: "#fff", fontWeight: 700, padding: "14px 32px", borderRadius: 999, textDecoration: "none", fontSize: "1rem" }}>💬 WhatsApp</a>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// GALLERY PAGE — All 20 real images
+// LIGHTBOX MODAL
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-function GalleryPage() {
-  const [activeFilter, setActiveFilter] = useState("सभी")
+function LightboxModal({ item, index, total, onClose, onPrev, onNext }) {
+  // ESC key to close
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.key === "Escape") onClose()
+      if (e.key === "ArrowLeft") onPrev()
+      if (e.key === "ArrowRight") onNext()
+    }
+    window.addEventListener("keydown", handler)
+    return () => window.removeEventListener("keydown", handler)
+  }, [onClose, onPrev, onNext])
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: "fixed", inset: 0, zIndex: 9999,
+        background: "rgba(0,0,0,0.97)",
+        display: "flex", flexDirection: "column",
+        alignItems: "center", justifyContent: "center",
+      }}
+    >
+      {/* ── TOP BAR: Close button ── */}
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 20px", zIndex: 10001 }}
+        onClick={e => e.stopPropagation()}
+      >
+        <span style={{ color: THEME.textMuted, fontSize: "0.9rem" }}>{index + 1} / {total}</span>
+        <button
+          onClick={onClose}
+          style={{
+            background: `linear-gradient(135deg, ${THEME.gold}, ${THEME.goldDark})`,
+            border: "none", borderRadius: 999,
+            color: "#0d0500", fontWeight: 800, fontSize: "1rem",
+            padding: "10px 24px", cursor: "pointer",
+            display: "flex", alignItems: "center", gap: 8,
+            boxShadow: `0 4px 20px ${THEME.gold}80`,
+          }}
+        >
+          <X size={18} /> बंद करें
+        </button>
+      </div>
+
+      {/* ── LEFT arrow ── */}
+      <button
+        onClick={e => { e.stopPropagation(); onPrev() }}
+        style={{
+          position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)",
+          background: `${THEME.gold}25`, border: `2px solid ${THEME.gold}`,
+          borderRadius: "50%", width: 56, height: 56,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          cursor: "pointer", color: THEME.gold, zIndex: 10001,
+        }}
+      ><ChevronLeft size={32} /></button>
+
+      {/* ── IMAGE ── */}
+      <div onClick={e => e.stopPropagation()} style={{ textAlign: "center", padding: "80px 80px 40px" }}>
+        <img
+          src={item?.src}
+          alt={item?.caption}
+          style={{
+            maxWidth: "88vw", maxHeight: "72vh",
+            objectFit: "contain", borderRadius: 14,
+            border: `2px solid ${THEME.gold}`,
+            boxShadow: `0 0 60px ${THEME.gold}30`,
+          }}
+        />
+        <p style={{ color: THEME.goldLight, marginTop: 18, fontSize: "1.15rem", fontWeight: 700 }}>{item?.caption}</p>
+        <p style={{ color: THEME.textMuted, fontSize: "0.85rem", marginTop: 6 }}>{item?.category}</p>
+      </div>
+
+      {/* ── RIGHT arrow ── */}
+      <button
+        onClick={e => { e.stopPropagation(); onNext() }}
+        style={{
+          position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)",
+          background: `${THEME.gold}25`, border: `2px solid ${THEME.gold}`,
+          borderRadius: "50%", width: 56, height: 56,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          cursor: "pointer", color: THEME.gold, zIndex: 10001,
+        }}
+      ><ChevronRight size={32} /></button>
+    </div>
+  )
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// GALLERY PAGE — Expanded with 6 categories + all new images
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function GalleryPage({ initialFilter = "सभी" }) {
+  const [activeFilter, setActiveFilter] = useState(initialFilter)
   const [lightbox, setLightbox] = useState({ open: false, index: 0 })
 
-  const filters = ["सभी", "स्टेज डेकोरेशन", "LED डेकोर", "फाइबर उत्पाद", "MS लोहे"]
+  // Sync filter when navigated from Services page
+  useEffect(() => { setActiveFilter(initialFilter) }, [initialFilter])
+
+  const filters = [
+    "सभी",
+    "स्टेज डेकोरेशन",
+    "LED डेकोर",
+    "हल्दी टब",
+    "स्कूल फाइबर वर्क",
+    "प्लेग्राउंड",
+    "MS लोहे",
+  ]
 
   const galleryItems = [
-    // स्टेज डेकोरेशन
-    { id:1,  src: IMG.stage1,   caption: "भव्य शादी स्टेज",           category: "स्टेज डेकोरेशन" },
-    { id:2,  src: IMG.stage2,   caption: "राजस्थानी शादी स्टेज",      category: "स्टेज डेकोरेशन" },
-    { id:3,  src: IMG.stage3,   caption: "भव्य आर्च वेन्यू",          category: "स्टेज डेकोरेशन" },
-    { id:4,  src: IMG.stage4,   caption: "स्टेज ट्री पिलर",           category: "स्टेज डेकोरेशन" },
-    { id:5,  src: IMG.stage5,   caption: "कमल फूल बैकड्रॉप",         category: "स्टेज डेकोरेशन" },
-    { id:6,  src: IMG.stage6,   caption: "गोल्ड फूल सेंटरपीस",        category: "स्टेज डेकोरेशन" },
-    { id:7,  src: IMG.stage7,   caption: "लक्जरी बैंक्वेट हॉल",      category: "स्टेज डेकोरेशन" },
-    // LED डेकोर
-    { id:8,  src: IMG.led1,     caption: "LED हार्ट बैकड्रॉप",       category: "LED डेकोर" },
-    { id:9,  src: IMG.led2,     caption: "LED मंडल डेकोरेशन",        category: "LED डेकोर" },
-    { id:10, src: IMG.led3,     caption: "LED क्यूब लाइट",            category: "LED डेकोर" },
-    { id:11, src: IMG.led4,     caption: "LED नियॉन पैनल",            category: "LED डेकोर" },
-    { id:12, src: IMG.led5,     caption: "LED स्टार डेकोर",           category: "LED डेकोर" },
-    // फाइबर उत्पाद
-    { id:13, src: IMG.fiber1,   caption: "मल्टी प्लेग्राउंड सेट",    category: "फाइबर उत्पाद" },
-    { id:14, src: IMG.fiber2,   caption: "डबल स्लाइड प्लेग्राउंड",   category: "फाइबर उत्पाद" },
-    { id:15, src: IMG.fiber3,   caption: "कवर्ड प्लेग्राउंड",        category: "फाइबर उत्पाद" },
-    { id:16, src: IMG.fiber4,   caption: "आउटडोर प्लेग्राउंड",       category: "फाइबर उत्पाद" },
-    { id:17, src: IMG.fiber5,   caption: "एक्टिविटी टेबल सेट",       category: "फाइबर उत्पाद" },
-    { id:18, src: IMG.fiber6,   caption: "लेक्चर चेयर सेट",          category: "फाइबर उत्पाद" },
-    { id:19, src: IMG.fiber7,   caption: "डोरेमॉन डस्टबिन",          category: "फाइबर उत्पाद" },
-    { id:20, src: IMG.fiber8,   caption: "रैबिट डस्टबिन",            category: "फाइबर उत्पाद" },
-    // MS लोहे
-    { id:21, src: IMG.ms1,      caption: "स्कूल डेस्क-बेंच",         category: "MS लोहे" },
-    { id:22, src: IMG.ms2,      caption: "डेस्क-चेयर सेट",           category: "MS लोहे" },
+    // ── स्टेज डेकोरेशन ─────────────────────────────────────────
+    { id:1,  src: IMG.stage1,  caption: "भव्य शादी स्टेज (नाइट)",           category: "स्टेज डेकोरेशन" },
+    { id:2,  src: IMG.stage2,  caption: "राजदरबार पैलेस — वेडिंग वेन्यू",        category: "स्टेज डेकोरेशन" },
+    { id:3,  src: IMG.stage3,  caption: "MS आर्च ट्री वेडिंग मण्डप",       category: "स्टेज डेकोरेशन" },
+    { id:4,  src: IMG.stage4,  caption: "स्टेज ट्री पिलर डेकोर",           category: "स्टेज डेकोरेशन" },
+    { id:5,  src: IMG.stage5,  caption: "कमल फूल बैकड्रॉप",                category: "LED डेकोर" },
+    { id:6,  src: IMG.stage6,  caption: "गोल्ड फूल सेंटरपीस",              category: "स्टेज डेकोरेशन" },
+    { id:7,  src: IMG.stage7,  caption: "भव्य आर्च वेन्यू",               category: "स्टेज डेकोरेशन" },
+    { id:8,  src: IMG.stage8,  caption: "शादी स्टेज लाइव",                 category: "स्टेज डेकोरेशन" },
+    { id:9,  src: IMG.stage9,  caption: "राजस्थानी शादी स्टेज",            category: "स्टेज डेकोरेशन" },
+
+    // ── LED डेकोर ──────────────────────────────────────────────
+    // NOTE: LED items belong ONLY in LED Decor — none in Stage or Playground
+    { id:10, src: IMG.led1,   caption: "LED नियॉन पंख डिज़ाइन",            category: "LED डेकोर" },
+    { id:11, src: IMG.led2,   caption: "LED नियॉन पैनल",                   category: "LED डेकोर" },
+    { id:12, src: IMG.led3,   caption: "LED स्टार नियॉन",                  category: "LED डेकोर" },
+    { id:13, src: IMG.led4,   caption: "LED सर्कल नियॉन",                  category: "LED डेकोर" },
+    { id:14, src: IMG.led5,   caption: "LED स्वान हार्ट बैकड्रॉप",         category: "LED डेकोर" },
+    { id:15, src: IMG.led6,   caption: "LED हार्ट बैकड्रॉप",               category: "LED डेकोर" },
+    { id:16, src: IMG.led7,   caption: "LED मण्डल डेकोरेशन",              category: "LED डेकोर" },
+    { id:17, src: IMG.led8,   caption: "LED स्टार डेकोर",                  category: "LED डेकोर" },
+
+    // ── हल्दी टब ───────────────────────────────────────────────
+    { id:18, src: IMG.fiber1,  caption: "हल्दी टब — खुली टॉप",             category: "हल्दी टब" },
+    { id:19, src: IMG.fiber2,  caption: "हल्दी टब — बाहर से",              category: "हल्दी टब" },
+    { id:20, src: IMG.fiber3,  caption: "हल्दी टब — गोल्डन फिनिश",        category: "हल्दी टब" },
+    { id:21, src: IMG.fiber4,  caption: "हल्दी टब — हंस डिज़ाइन",          category: "हल्दी टब" },
+
+    // ── स्कूल फाइबर वर्क ───────────────────────────────────────
+    { id:24, src: IMG.school3, caption: "बुद्ध फाइबर आर्ट पैनल",          category: "स्कूल फाइबर वर्क" },
+    { id:25, src: IMG.school4, caption: "बुद्ध पेंटेड क्लोज़ व्यू",        category: "स्कूल फाइबर वर्क" },
+    { id:26, src: IMG.school5, caption: "स्कूल गेट पर बुद्ध आर्ट",        category: "स्कूल फाइबर वर्क" },
+    { id:27, src: IMG.school6, caption: "सूर्य देव फाइबर मूर्ति",          category: "स्कूल फाइबर वर्क" },
+    { id:28, src: IMG.school7, caption: "लेक्चर चेयर सेट",                 category: "स्कूल फाइबर वर्क" },
+    { id:29, src: IMG.school8, caption: "डोरेमॉन डस्टबिन",                 category: "स्कूल फाइबर वर्क" },
+    { id:41, src: IMG.ms3,    caption: "स्कूल डेस्क-बेंच",                category: "स्कूल फाइबर वर्क" },
+    { id:42, src: IMG.ms4,    caption: "डेस्क-चेयर सेट",                   category: "स्कूल फाइबर वर्क" },
+    { id:43, src: IMG.ms5,    caption: "एक्टिविटी टेबल सेट",              category: "स्कूल फाइबर वर्क" },
+    { id:44, src: IMG.ms6,    caption: "कलरफुल चेयर रो",                   category: "स्कूल फाइबर वर्क" },
+
+    // ── प्लेग्राउंड ─── (only actual playground equipment, no LED)
+    { id:30, src: IMG.play1,   caption: "मल्टी प्लेग्राउंड सेट",           category: "प्लेग्राउंड" },
+    { id:31, src: IMG.play2,   caption: "डबल स्लाइड प्लेग्राउंड",          category: "प्लेग्राउंड" },
+    { id:32, src: IMG.play3,   caption: "कवर्ड प्लेग्राउंड",              category: "प्लेग्राउंड" },
+    { id:33, src: IMG.play4,   caption: "आउटडोर प्लेग्राउंड",             category: "प्लेग्राउंड" },
+    // play5 (LED star) moved to LED Decor — keeping only playground equipment here
+
+    // ── MS लोहे ─── (only MS iron fabrication / stage items)
+    { id:35, src: IMG.ms1,    caption: "MS लोहे के डेकोरेटिव फ्रेम",      category: "MS लोहे" },
+    { id:36, src: IMG.ms2,    caption: "MS लोहे का मण्डप स्ट्रक्चर",      category: "MS लोहे" },
+    // desk/bench/chair/activity table moved to School Fiber Work
   ]
 
   const filtered = activeFilter === "सभी" ? galleryItems : galleryItems.filter(i => i.category === activeFilter)
@@ -692,12 +870,13 @@ function GalleryPage() {
     <div>
       <PageHeader title="हमारे काम की झलक" sub="हर उत्पाद — हमारे हुनर की पहचान" />
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "4rem 1.5rem" }}>
+
         {/* Filters */}
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: "3rem" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", marginBottom: "2rem" }}>
           {filters.map(f => (
             <button key={f} onClick={() => { setActiveFilter(f); setLightbox({ open: false, index: 0 }) }} style={{
-              padding: "10px 22px", borderRadius: 999, cursor: "pointer",
-              fontWeight: 600, fontSize: "0.9rem", transition: "all 0.2s",
+              padding: "9px 20px", borderRadius: 999, cursor: "pointer",
+              fontWeight: 600, fontSize: "0.88rem", transition: "all 0.2s",
               background: activeFilter === f ? `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})` : "transparent",
               color: activeFilter === f ? "#0d0500" : THEME.gold,
               border: `2px solid ${THEME.gold}`,
@@ -721,7 +900,7 @@ function GalleryPage() {
               onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.borderColor = `${THEME.gold}30`; e.currentTarget.style.boxShadow = "none" }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img src={item.src} alt={item.caption} style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} />
+                <img src={item.src} alt={item.caption} loading="lazy" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} />
                 <div style={{
                   position: "absolute", inset: 0, background: "rgba(0,0,0,0.55)",
                   display: "flex", alignItems: "center", justifyContent: "center",
@@ -742,18 +921,16 @@ function GalleryPage() {
         </div>
       </div>
 
-      {/* Lightbox */}
+      {/* ── LIGHTBOX ── */}
       {lightbox.open && (
-        <div onClick={() => setLightbox({ open: false, index: 0 })} style={{ position: "fixed", inset: 0, zIndex: 200, background: "rgba(0,0,0,0.96)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <button onClick={() => setLightbox({ open: false, index: 0 })} style={{ position: "absolute", top: 20, right: 20, background: `${THEME.gold}22`, border: `1px solid ${THEME.gold}`, borderRadius: "50%", width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: THEME.gold, zIndex: 201 }}><X size={22} /></button>
-          <button onClick={e => { e.stopPropagation(); setLightbox(prev => ({ ...prev, index: (prev.index - 1 + filtered.length) % filtered.length })) }} style={{ position: "absolute", left: 16, background: `${THEME.gold}22`, border: `1px solid ${THEME.gold}`, borderRadius: "50%", width: 52, height: 52, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: THEME.gold, zIndex: 201 }}><ChevronLeft size={28} /></button>
-          <div onClick={e => e.stopPropagation()} style={{ maxWidth: "85vw", textAlign: "center" }}>
-            <img src={filtered[lightbox.index]?.src} alt={filtered[lightbox.index]?.caption} style={{ maxWidth: "85vw", maxHeight: "75vh", objectFit: "contain", borderRadius: 12, border: `2px solid ${THEME.gold}` }} />
-            <p style={{ color: THEME.goldLight, marginTop: 16, fontSize: "1.1rem", fontWeight: 600 }}>{filtered[lightbox.index]?.caption}</p>
-            <p style={{ color: THEME.textMuted, fontSize: "0.85rem", marginTop: 4 }}>{lightbox.index + 1} / {filtered.length}</p>
-          </div>
-          <button onClick={e => { e.stopPropagation(); setLightbox(prev => ({ ...prev, index: (prev.index + 1) % filtered.length })) }} style={{ position: "absolute", right: 16, background: `${THEME.gold}22`, border: `1px solid ${THEME.gold}`, borderRadius: "50%", width: 52, height: 52, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: THEME.gold, zIndex: 201 }}><ChevronRight size={28} /></button>
-        </div>
+        <LightboxModal
+          item={filtered[lightbox.index]}
+          index={lightbox.index}
+          total={filtered.length}
+          onClose={() => setLightbox({ open: false, index: 0 })}
+          onPrev={() => setLightbox(prev => ({ ...prev, index: (prev.index - 1 + filtered.length) % filtered.length }))}
+          onNext={() => setLightbox(prev => ({ ...prev, index: (prev.index + 1) % filtered.length }))}
+        />
       )}
     </div>
   )
@@ -791,7 +968,7 @@ function CareerPage({ navigate }) {
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "4rem 1.5rem" }}>
         {/* Flyer image */}
         <div style={{ marginBottom: "3rem", borderRadius: 20, overflow: "hidden", border: `2px solid ${THEME.gold}`, boxShadow: `0 0 40px ${THEME.gold}30`, maxWidth: 600, margin: "0 auto 3rem" }}>
-          <img src={IMG.flyer} alt="जय माँ अम्बे फाइबर वर्कशॉप करियर फ्लायर" style={{ width: "100%", display: "block" }} />
+          <img src={IMG.flyer} alt="जय माँ अम्बे फाइबर वर्कशॉप करियर फ्लायर" loading="lazy" style={{ width: "100%", display: "block" }} />
         </div>
 
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
@@ -860,7 +1037,7 @@ function ContactPage() {
   const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
   const handleSubmit = e => {
     e.preventDefault()
-    const msg = `नमस्कार रणधीर जी!\nमेरा नाम ${formData.name} है।\nमोबाइल: ${formData.phone}\nसंदेश: ${formData.message}`
+    const msg = `नमस्कार!\nमेरा नाम ${formData.name} है।\nमोबाइल: ${formData.phone}\nसंदेश: ${formData.message}`
     window.open(`https://wa.me/919102556441?text=${encodeURIComponent(msg)}`, "_blank")
   }
   const inputStyle = { width: "100%", padding: "14px 16px", borderRadius: 10, background: "#1a0a00", border: `1.5px solid ${THEME.gold}50`, color: THEME.white, fontSize: "0.95rem", outline: "none", boxSizing: "border-box", fontFamily: "'Hind', sans-serif", transition: "border-color 0.2s" }
@@ -935,14 +1112,16 @@ function Footer({ navigate }) {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 16 }}>
               <img
-                src="assets/logo.png"
+                src={IMG.logoOfficial}
                 alt="जय माँ अम्बे फाइबर वर्कशॉप लोगो"
+                loading="lazy"
                 style={{ width: 72, height: 72, borderRadius: "50%", objectFit: "cover", border: `3px solid ${THEME.gold}`, boxShadow: `0 0 24px ${THEME.gold}60` }}
               />
               <div>
-                <p style={{ color: THEME.goldLight, fontWeight: 700, fontFamily: "'Tiro Devanagari Hindi', serif", fontSize: "1.05rem", margin: "0 0 4px" }}>जय माँ अम्बे फाइबर वर्कशॉप</p>
-                <p style={{ color: THEME.textMuted, margin: "0 0 2px", fontSize: "0.85rem" }}>मुजफ्फरपुर, बिहार</p>
-                <p style={{ color: THEME.textMuted, margin: 0, fontSize: "0.85rem" }}>संस्थापक: रणधीर कुमार</p>
+                <p style={{ color: THEME.goldLight, fontWeight: 700, fontFamily: "'Tiro Devanagari Hindi', serif", fontSize: "1.05rem", margin: "0 0 2px" }}>जय माँ अम्बे फाइबर वर्कशॉप</p>
+                <p style={{ color: THEME.gold, fontWeight: 600, margin: "0 0 2px", fontSize: "0.9rem" }}>Mr. Randhir Kumar</p>
+                <p style={{ color: THEME.textMuted, margin: "0 0 2px", fontSize: "0.82rem" }}>मुजफ्फरपुर, बिहार</p>
+                <p style={{ color: THEME.textMuted, margin: 0, fontSize: "0.82rem" }}>संस्थापक एवं मालिक</p>
               </div>
             </div>
           </div>
@@ -969,45 +1148,31 @@ function Footer({ navigate }) {
         <div style={{ borderTop: `1px solid ${THEME.gold}30`, borderBottom: `1px solid ${THEME.gold}30`, padding: "1.2rem", textAlign: "center", marginBottom: "1.5rem", background: `${THEME.gold}08` }}>
           <p style={{ color: THEME.gold, margin: 0, fontStyle: "italic", fontSize: "0.95rem" }}>✨ आज ही संपर्क करें और अपने हुनर को दें एक नई पहचान</p>
         </div>
-        {/* ── SEO KEYWORD SECTION — visible for crawlers ── */}
+        {/* SEO KEYWORD SECTION */}
         <div style={{ borderTop: `1px solid ${THEME.gold}20`, paddingTop: "1.5rem", marginBottom: "1.5rem" }}>
           <p style={{ color: THEME.textMuted, fontSize: "0.78rem", textAlign: "center", marginBottom: 10, letterSpacing: 0.5 }}>
-            हमारी सेवाएं क्षेत्र | Our Services & Coverage
+            हमारी सेवाएं क्षेत्र | Our Services &amp; Coverage
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center" }}>
             {[
-              "जय माँ अम्बे फाइबर वर्कशॉप",
-              "Jai Maa Ambe Fiber Workshop",
-              "माँ अम्बे फाइबर मुजफ्फरपुर",
-              "Maa Ambe Fiber Muzaffarpur",
-              "अम्बे फाइबर वर्कशॉप",
-              "Ambe Fiber Workshop Bihar",
-              "शादी स्टेज मुजफ्फरपुर",
-              "Wedding Stage Muzaffarpur",
-              "MS लोहे डेकोर बिहार",
-              "MS Iron Decoration Bihar",
-              "LED डेकोर मुजफ्फरपुर",
-              "फाइबर प्लेग्राउंड बिहार",
-              "हल्दी टब निर्माता",
-              "Haldi Tub Manufacturer",
-              "रणधीर कुमार मुजफ्फरपुर",
-              "Randhir Kumar Muzaffarpur",
-              "इवेंट डेकोर बिहार",
-              "Event Decor Bihar",
+              "जय माँ अम्बे फाइबर वर्कशॉप", "Jai Maa Ambe Fiber Workshop",
+              "माँ अम्बे फाइबर मुजफ्फरपुर", "Maa Ambe Fiber Muzaffarpur",
+              "शादी स्टेज मुजफ्फरपुर", "Wedding Stage Muzaffarpur",
+              "MS लोहे डेकोर बिहार", "LED डेकोर मुजफ्फरपुर",
+              "फाइबर प्लेग्राउंड बिहार", "हल्दी टब निर्माता",
+              "स्कूल फर्नीचर फाइबर", "School Furniture Fiber Bihar",
+              "इवेंट डेकोर बिहार", "Event Decor Bihar",
+              "Haldi Tub Manufacturer", "Fiber Workshop Muzaffarpur",
             ].map((tag, i) => (
               <span key={i} style={{
-                background: `${THEME.gold}10`,
-                border: `1px solid ${THEME.gold}25`,
-                borderRadius: 999,
-                padding: "3px 10px",
-                fontSize: "0.72rem",
-                color: THEME.textMuted,
+                background: `${THEME.gold}10`, border: `1px solid ${THEME.gold}25`,
+                borderRadius: 999, padding: "3px 10px",
+                fontSize: "0.72rem", color: THEME.textMuted,
               }}>{tag}</span>
             ))}
           </div>
         </div>
-
-        <p style={{ color: THEME.textMuted, textAlign: "center", margin: 0, fontSize: "0.85rem" }}>© 2024 जय माँ अम्बे फाइबर वर्कशॉप | सर्वाधिकार सुरक्षित | रणधीर कुमार</p>
+        <p style={{ color: THEME.textMuted, textAlign: "center", margin: 0, fontSize: "0.85rem" }}>© 2024 जय माँ अम्बे फाइबर वर्कशॉप | सर्वाधिकार सुरक्षित</p>
       </div>
     </footer>
   )
@@ -1019,8 +1184,13 @@ function Footer({ navigate }) {
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home")
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [galleryFilter, setGalleryFilter] = useState("सभी")
 
-  const navigate = (page) => { setCurrentPage(page); window.scrollTo({ top: 0, behavior: "smooth" }) }
+  const navigate = (page, filter) => {
+    if (filter) setGalleryFilter(filter)
+    setCurrentPage(page)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
 
   useEffect(() => {
     const style = document.createElement("style")
@@ -1029,18 +1199,12 @@ export default function App() {
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       body { font-family: 'Hind', sans-serif; background: #0d0500; color: #c8b89a; scroll-behavior: smooth; }
       h1, h2, h3 { font-family: 'Tiro Devanagari Hindi', serif; }
-      @keyframes pulse-gold {
-        0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.4), 0 0 30px rgba(201,168,76,0.4); }
-        70% { box-shadow: 0 0 0 15px rgba(201,168,76,0), 0 0 30px rgba(201,168,76,0.2); }
-      }
-      @keyframes shimmer { 0%{opacity:0.3} 50%{opacity:0.8} 100%{opacity:0.3} }
-      @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
       @keyframes whatsapp-pulse {
         0%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0.5)}
-        70%{transform:scale(1.08);box-shadow:0 0 0 14px rgba(37,211,102,0)}
+        70%{transform:scale(1.06);box-shadow:0 0 0 12px rgba(37,211,102,0)}
         100%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0)}
       }
-      @keyframes call-pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
+      @keyframes call-pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
       .gallery-grid { grid-template-columns: repeat(3,1fr); }
       @media (max-width:768px) {
         .gallery-grid{grid-template-columns:repeat(2,1fr)!important;}
@@ -1069,7 +1233,7 @@ export default function App() {
       case "home":     return <HomePage navigate={navigate} />
       case "about":    return <AboutPage navigate={navigate} />
       case "services": return <ServicesPage navigate={navigate} />
-      case "gallery":  return <GalleryPage />
+      case "gallery":  return <GalleryPage initialFilter={galleryFilter} />
       case "career":   return <CareerPage navigate={navigate} />
       case "contact":  return <ContactPage />
       default:         return <HomePage navigate={navigate} />
@@ -1082,7 +1246,7 @@ export default function App() {
       <div style={{ paddingTop: 68 }}>{renderPage()}</div>
       <Footer navigate={navigate} />
 
-      {/* ── WhatsApp FAB (Official Logo) ── */}
+      {/* ── WhatsApp FAB ── */}
       <a
         href="https://wa.me/919102556441"
         target="_blank" rel="noopener noreferrer"
@@ -1093,17 +1257,16 @@ export default function App() {
           background: "#25D366",
           display: "flex", alignItems: "center", justifyContent: "center",
           boxShadow: "0 4px 24px rgba(37,211,102,0.6)",
-          animation: "whatsapp-pulse 2s ease-in-out infinite",
+          animation: "whatsapp-pulse 2.5s ease-in-out infinite",
           textDecoration: "none",
         }}
       >
-        {/* Official WhatsApp SVG Logo */}
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="white"/>
         </svg>
       </a>
 
-      {/* ── Phone FAB (always visible, bottom-left) ── */}
+      {/* ── Phone FAB ── */}
       <a
         href="tel:9102556441"
         title="अभी कॉल करें"
@@ -1113,11 +1276,10 @@ export default function App() {
           background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`,
           display: "flex", alignItems: "center", justifyContent: "center",
           boxShadow: `0 4px 24px ${THEME.gold}70`,
-          animation: "call-pulse 2s ease-in-out infinite",
+          animation: "call-pulse 2.5s ease-in-out infinite",
           textDecoration: "none",
         }}
       >
-        {/* Phone SVG icon */}
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#0d0500"/>
         </svg>
@@ -1133,7 +1295,7 @@ export default function App() {
             background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold})`,
             border: "none", display: "flex", alignItems: "center", justifyContent: "center",
             cursor: "pointer", boxShadow: `0 4px 16px ${THEME.gold}50`,
-            animation: "fadeInUp 0.3s ease both", transition: "transform 0.2s",
+            transition: "transform 0.2s",
           }}
           onMouseEnter={e => e.currentTarget.style.transform = "scale(1.12)"}
           onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
