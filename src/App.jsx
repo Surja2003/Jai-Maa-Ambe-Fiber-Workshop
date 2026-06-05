@@ -272,10 +272,88 @@ function PageHeader({ title, sub, breadcrumb, navigate }) {
 function HomePage({ navigate }) {
 
   const galleryPreview = [
-    { src: IMG.stage1,  caption: "भव्य शादी स्टेज" },
-    { src: IMG.led5,    caption: "LED हार्ट बैकड्रॉप" },
-    { src: IMG.fiber5,  caption: "फाइबर प्लेग्राउंड" },
+    // Stage Decor
+    { src: IMG.stage1,  caption: "भव्य शादी स्टेज",        cat: "स्टेज" },
+    { src: IMG.stage2,  caption: "सोना मण्डप",              cat: "स्टेज" },
+    { src: IMG.stage3,  caption: "आर्च मण्डप स्टेज",        cat: "स्टेज" },
+    { src: IMG.stage4,  caption: "ट्री पिलर स्टेज",          cat: "स्टेज" },
+    { src: IMG.stage5,  caption: "कमल बैकड्रॉप स्टेज",      cat: "स्टेज" },
+    { src: IMG.stage6,  caption: "गोल्ड फ्लावर सेंटरपीस",   cat: "स्टेज" },
+    { src: IMG.stage7,  caption: "आर्च वेन्यू",              cat: "स्टेज" },
+    { src: IMG.stage8,  caption: "शादी स्टेज",              cat: "स्टेज" },
+    { src: IMG.stage9,  caption: "राजस्थानी स्टेज",          cat: "स्टेज" },
+    // LED Decor
+    { src: IMG.led1,    caption: "LED नियॉन फेदर",          cat: "LED" },
+    { src: IMG.led2,    caption: "LED नियॉन पैनल",           cat: "LED" },
+    { src: IMG.led3,    caption: "LED स्टार नियॉन",          cat: "LED" },
+    { src: IMG.led4,    caption: "LED सर्किल नियॉन",         cat: "LED" },
+    { src: IMG.led5,    caption: "LED हार्ट बैकड्रॉप",        cat: "LED" },
+    { src: IMG.led6,    caption: "LED हार्ट बैकड्रॉप",        cat: "LED" },
+    { src: IMG.led7,    caption: "LED मण्डल",               cat: "LED" },
+    { src: IMG.led8,    caption: "LED स्टार",               cat: "LED" },
+    // Fiber / Haldi Tub
+    { src: IMG.fiber1,  caption: "हल्दी टब (खुला)",           cat: "फाइबर" },
+    { src: IMG.fiber2,  caption: "हल्दी टब (सिलेंडर)",       cat: "फाइबर" },
+    { src: IMG.fiber3,  caption: "हल्दी टब",                cat: "फाइबर" },
+    { src: IMG.fiber4,  caption: "हल्दी टब स्वान",           cat: "फाइबर" },
+    { src: IMG.fiber5,  caption: "फाइबर प्लेग्राउंड सेट",    cat: "फाइबर" },
+    { src: IMG.fiber6,  caption: "डबल स्लाइड प्लेग्राउंड",   cat: "फाइबर" },
+    { src: IMG.fiber7,  caption: "कवर्ड प्लेग्राउंड",         cat: "फाइबर" },
+    { src: IMG.fiber8,  caption: "आउटडोर प्लेग्राउंड",        cat: "फाइबर" },
+    // MS Iron
+    { src: IMG.ms1,     caption: "MS लोहे डेकोरेटिव फ्रेम",  cat: "MS लोहे" },
+    { src: IMG.ms2,     caption: "MS लोहे मण्डप",            cat: "MS लोहे" },
+    { src: IMG.ms3,     caption: "स्कूल डेस्क-बेंच",          cat: "MS लोहे" },
+    { src: IMG.ms4,     caption: "डेस्क-चेयर सेट",            cat: "MS लोहे" },
+    { src: IMG.ms5,     caption: "एक्टिविटी टेबल सेट",        cat: "MS लोहे" },
+    { src: IMG.ms6,     caption: "फाइबर चेयर सेट",           cat: "MS लोहे" },
+    // School Fiber Work
+    { src: IMG.school1, caption: "फाइबर पिलर (सफेद)",        cat: "स्कूल" },
+    { src: IMG.school2, caption: "फाइबर पिलर (रंगीन)",       cat: "स्कूल" },
+    { src: IMG.school3, caption: "बुद्ध फाइबर आर्ट पैनल",    cat: "स्कूल" },
+    { src: IMG.school4, caption: "बुद्ध पेंटेड",              cat: "स्कूल" },
+    { src: IMG.school5, caption: "स्कूल गेट बुद्ध",           cat: "स्कूल" },
+    { src: IMG.school6, caption: "सूर्य फाइबर मूर्ति",        cat: "स्कूल" },
+    { src: IMG.school7, caption: "लेक्चर चेयर",              cat: "स्कूल" },
+    { src: IMG.school8, caption: "डोरेमॉन डस्टबिन",           cat: "स्कूल" },
   ]
+
+  // Auto-rotating gallery carousel
+  const [activeSlide, setActiveSlide] = useState(0)
+  const [captionVisible, setCaptionVisible] = useState(true)
+  const touchStartX = useRef(null)
+  const carouselRef = useRef(null)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCaptionVisible(false)
+      setTimeout(() => {
+        setActiveSlide(prev => (prev + 1) % galleryPreview.length)
+        setCaptionVisible(true)
+      }, 250)
+    }, 3500)
+    return () => clearInterval(timer)
+  }, [galleryPreview.length])
+
+  const goToSlide = (idx) => {
+    setCaptionVisible(false)
+    setTimeout(() => {
+      setActiveSlide(idx)
+      setCaptionVisible(true)
+    }, 250)
+  }
+
+  // Touch/Swipe handlers
+  const handleTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) goToSlide((activeSlide + 1) % galleryPreview.length)
+      else goToSlide((activeSlide - 1 + galleryPreview.length) % galleryPreview.length)
+    }
+    touchStartX.current = null
+  }
 
   const services = [
     { icon: <Wrench size={36} />, title: "MS लोहे के डिज़ाइन", desc: "शादी-विवाह, पार्टी, रिसेप्शन के लिए मजबूत और सुंदर MS लोहे के सजावटी सामान।" },
@@ -301,7 +379,8 @@ function HomePage({ navigate }) {
         backgroundSize: "cover", backgroundPosition: "center",
         padding: "100px 1.5rem 3rem",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(13,5,0,0.9) 0%, rgba(50,20,0,0.82) 100%)" }} />
+        {/* Very light overlay - background image clearly visible */}
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.45) 85%, rgba(0,0,0,0.6) 100%)" }} />
 
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 820 }}>
           <div style={{ display: "inline-block", border: `1px solid ${THEME.gold}`, borderRadius: 999, padding: "6px 20px", marginBottom: 24, color: THEME.goldLight, fontSize: "0.85rem" }}>
@@ -313,8 +392,9 @@ function HomePage({ navigate }) {
             background: `linear-gradient(135deg, ${THEME.goldLight}, ${THEME.gold}, ${THEME.goldDark})`,
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
             margin: "0 0 1.2rem", lineHeight: 1.3,
+            filter: "drop-shadow(0 3px 12px rgba(0,0,0,0.9))",
           }}>शादी-विवाह और हर आयोजन को बनाएं यादगार</h1>
-          <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.2rem)", marginBottom: "2rem", lineHeight: 1.7, color: "#e8d5b0" }}>
+          <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.2rem)", marginBottom: "2rem", lineHeight: 1.7, color: "#fff5d6", textShadow: "0 2px 10px rgba(0,0,0,0.95), 0 0 30px rgba(0,0,0,0.8)" }}>
             MS लोहे और फाइबर से बने खूबसूरत सजावटी उत्पाद —<br />आपके बजट में, आपके डिज़ाइन में
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", marginBottom: "2.5rem" }}>
@@ -379,28 +459,201 @@ function HomePage({ navigate }) {
         </div>
       </section>
 
-      {/* ── GALLERY PREVIEW ── */}
-      <section style={{ padding: "0 1.5rem 5rem", maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "3rem", flexWrap: "wrap", gap: 16 }}>
+      {/* ── GALLERY PREVIEW — AUTO ROTATING CAROUSEL ── */}
+      <section style={{ padding: "0 1rem 5rem", maxWidth: 1200, margin: "0 auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", flexWrap: "wrap", gap: 12 }}>
           <div>
-            <h2 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "2.2rem", margin: 0 }}>काम की झलक</h2>
+            <h2 style={{ fontFamily: "'Tiro Devanagari Hindi', serif", color: THEME.goldLight, fontSize: "clamp(1.6rem, 4vw, 2.2rem)", margin: 0 }}>काम की झलक</h2>
             <div style={{ width: 60, height: 2, background: THEME.gold, marginTop: 8 }} />
           </div>
-          <button onClick={() => navigate("gallery")} style={{ background: "none", border: `1px solid ${THEME.gold}`, color: THEME.gold, borderRadius: 8, padding: "8px 20px", cursor: "pointer", fontSize: "0.95rem" }}>पूरी गैलरी →</button>
+          <button onClick={() => navigate("gallery")} style={{ background: "none", border: `1px solid ${THEME.gold}`, color: THEME.gold, borderRadius: 8, padding: "8px 16px", cursor: "pointer", fontSize: "0.9rem" }}>पूरी गैलरी →</button>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+
+        {/* ── SLIDING TRACK CAROUSEL — no black screen ── */}
+        <div
+          ref={carouselRef}
+          style={{
+            position: "relative",
+            borderRadius: 16, overflow: "hidden",
+            border: `2px solid ${THEME.gold}40`,
+            boxShadow: `0 8px 40px rgba(201,168,76,0.25)`,
+            touchAction: "pan-y",
+          }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Sliding track — all images side by side, no gap, no black */}
+          <div style={{
+            position: "relative",
+            width: "100%",
+            paddingBottom: "clamp(56%, 52vw, 52%)",
+            overflow: "hidden",
+          }}>
+            {/* The track: all images in one row */}
+            <div style={{
+              position: "absolute", inset: 0,
+              display: "flex",
+              width: `${galleryPreview.length * 100}%`,
+              height: "100%",
+              transform: `translateX(-${activeSlide * (100 / galleryPreview.length)}%)`,
+              transition: "transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+              willChange: "transform",
+            }}>
+              {galleryPreview.map((img, i) => (
+                <div
+                  key={i}
+                  style={{
+                    width: `${100 / galleryPreview.length}%`,
+                    flexShrink: 0,
+                    position: "relative",
+                    height: "100%",
+                  }}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.caption}
+                    loading={i <= 2 ? "eager" : "lazy"}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom gradient overlay — always on top */}
+            <div style={{
+              position: "absolute", inset: 0, pointerEvents: "none",
+              background: "linear-gradient(to top, rgba(13,5,0,0.82) 0%, rgba(13,5,0,0.05) 50%, transparent 100%)",
+            }} />
+
+            {/* Category tag — top left */}
+            <div style={{
+              position: "absolute", top: 12, left: 12, zIndex: 2,
+              background: "rgba(13,5,0,0.75)", border: `1px solid ${THEME.gold}80`,
+              borderRadius: 999, padding: "3px 12px",
+              color: THEME.gold, fontSize: "0.75rem", fontWeight: 600,
+              backdropFilter: "blur(6px)",
+              opacity: captionVisible ? 1 : 0,
+              transition: "opacity 0.25s ease",
+            }}>
+              {galleryPreview[activeSlide].cat}
+            </div>
+
+            {/* Slide counter — top right */}
+            <div style={{
+              position: "absolute", top: 12, right: 12, zIndex: 2,
+              background: "rgba(13,5,0,0.75)", border: `1px solid ${THEME.gold}60`,
+              borderRadius: 999, padding: "3px 12px", color: THEME.gold,
+              fontSize: "0.75rem", backdropFilter: "blur(6px)",
+            }}>
+              {activeSlide + 1} / {galleryPreview.length}
+            </div>
+
+            {/* Caption — bottom */}
+            <div style={{
+              position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 2,
+              padding: "20px 52px 16px 16px",
+              opacity: captionVisible ? 1 : 0,
+              transform: captionVisible ? "translateY(0)" : "translateY(6px)",
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+            }}>
+              <div style={{
+                color: THEME.goldLight, fontWeight: 700,
+                fontSize: "clamp(0.95rem, 2.5vw, 1.4rem)",
+                fontFamily: "'Tiro Devanagari Hindi', serif",
+                textShadow: "0 2px 10px rgba(0,0,0,1)",
+              }}>
+                {galleryPreview[activeSlide].caption}
+              </div>
+            </div>
+
+            {/* Left arrow */}
+            <button
+              onClick={() => goToSlide((activeSlide - 1 + galleryPreview.length) % galleryPreview.length)}
+              style={{
+                position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)",
+                zIndex: 3, background: "rgba(13,5,0,0.7)",
+                border: `1.5px solid ${THEME.gold}70`,
+                borderRadius: "50%", width: 38, height: 38, cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                color: THEME.goldLight, fontSize: "1.4rem",
+                backdropFilter: "blur(6px)", padding: 0,
+                transition: "background 0.2s",
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(201,168,76,0.35)"}
+              onMouseLeave={e => e.currentTarget.style.background = "rgba(13,5,0,0.7)"}
+            >‹</button>
+
+            {/* Right arrow */}
+            <button
+              onClick={() => goToSlide((activeSlide + 1) % galleryPreview.length)}
+              style={{
+                position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)",
+                zIndex: 3, background: "rgba(13,5,0,0.7)",
+                border: `1.5px solid ${THEME.gold}70`,
+                borderRadius: "50%", width: 38, height: 38, cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                color: THEME.goldLight, fontSize: "1.4rem",
+                backdropFilter: "blur(6px)", padding: 0,
+                transition: "background 0.2s",
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(201,168,76,0.35)"}
+              onMouseLeave={e => e.currentTarget.style.background = "rgba(13,5,0,0.7)"}
+            >›</button>
+          </div>
+
+          {/* Dot indicators */}
+          <div style={{ background: THEME.bgCard, padding: "10px 12px 8px", display: "flex", justifyContent: "center", gap: 5, flexWrap: "wrap" }}>
+            {galleryPreview.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goToSlide(i)}
+                style={{
+                  flexShrink: 0,
+                  width: i === activeSlide ? 24 : 8,
+                  height: 8, borderRadius: 999,
+                  background: i === activeSlide ? THEME.gold : `${THEME.gold}35`,
+                  border: "none", cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  padding: 0,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Thumbnail strip — mobile scrollable */}
+        <div style={{
+          display: "flex", gap: 8, marginTop: 10,
+          overflowX: "auto", paddingBottom: 8,
+          scrollbarWidth: "thin", scrollbarColor: `${THEME.gold}40 transparent`,
+          WebkitOverflowScrolling: "touch",
+        }}>
           {galleryPreview.map((img, i) => (
-            <div key={i} onClick={() => navigate("gallery")} style={{
-              borderRadius: 16, overflow: "hidden", cursor: "pointer",
-              border: `1px solid ${THEME.gold}30`, transition: "all 0.3s",
-            }}
-              onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.03)"; e.currentTarget.style.borderColor = THEME.gold; e.currentTarget.style.boxShadow = `0 8px 30px ${THEME.gold}40` }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.borderColor = `${THEME.gold}30`; e.currentTarget.style.boxShadow = "none" }}
+            <div
+              key={i}
+              onClick={() => goToSlide(i)}
+              title={img.caption}
+              style={{
+                flexShrink: 0,
+                width: "clamp(56px, 12vw, 75px)",
+                height: "clamp(42px, 9vw, 56px)",
+                borderRadius: 8,
+                overflow: "hidden", cursor: "pointer",
+                border: i === activeSlide ? `2.5px solid ${THEME.gold}` : `2px solid ${THEME.gold}25`,
+                transition: "all 0.25s",
+                opacity: i === activeSlide ? 1 : 0.55,
+                transform: i === activeSlide ? "scale(1.1)" : "scale(1)",
+                boxShadow: i === activeSlide ? `0 2px 10px ${THEME.gold}50` : "none",
+              }}
             >
-              <img src={img.src} alt={img.caption} loading="lazy" style={{ width: "100%", height: 240, objectFit: "cover", display: "block" }} />
-              <div style={{ background: THEME.bgCard, padding: "12px 16px", color: THEME.goldLight, fontWeight: 600 }}>{img.caption}</div>
+              <img src={img.src} alt={img.caption} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
           ))}
+        </div>
+
+        {/* Swipe hint — mobile only */}
+        <div style={{ textAlign: "center", marginTop: 6, color: `${THEME.gold}70`, fontSize: "0.75rem" }}>
+          ← swipe করুন / tap করুন →
         </div>
       </section>
 
