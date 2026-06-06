@@ -375,8 +375,9 @@ function HomePage({ navigate }) {
         alignItems: "center",
         position: "relative", overflow: "hidden",
         paddingLeft: "1.5rem", paddingRight: "1.5rem", paddingBottom: "3rem",
+        paddingTop: "68px",
       }}>
-        {/* Background image — object-fit:cover never stretches, only crops */}
+        {/* Background image — clean cover, no tricks */}
         <img
           src={IMG.heroBg}
           alt=""
@@ -386,11 +387,12 @@ function HomePage({ navigate }) {
             position: "absolute", inset: 0,
             width: "100%", height: "100%",
             objectFit: "cover",
+            objectPosition: "center center",
             zIndex: 0,
           }}
         />
-        {/* Overlay */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.30) 40%, rgba(0,0,0,0.55) 85%, rgba(0,0,0,0.70) 100%)" }} />
+        {/* Overlay — controlled via CSS for mobile/desktop */}
+        <div className="hero-overlay" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
 
         <div style={{ position: "relative", zIndex: 2, textAlign: "center", maxWidth: 820 }}>
           <div style={{ display: "inline-block", border: `1px solid ${THEME.gold}`, borderRadius: 999, padding: "6px 20px", marginBottom: 24, color: THEME.goldLight, fontSize: "0.85rem" }}>
