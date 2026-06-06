@@ -19,6 +19,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Hero section: mobile = tight to navbar, desktop = more breathing room */
+.hero-section {
+  padding-top: 68px !important;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 90px !important;
+  }
+}
+
 /* Tailwind responsive helpers */
 @layer utilities {
   .md\:flex {

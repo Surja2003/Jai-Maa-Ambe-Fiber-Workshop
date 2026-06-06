@@ -370,8 +370,7 @@ function HomePage({ navigate }) {
 
   return (
     <div>
-      {/* ── HERO ── */}
-      <section style={{
+      <section className="hero-section" style={{
         minHeight: "100vh", display: "flex", flexDirection: "column",
         alignItems: "center", justifyContent: "flex-start",
         position: "relative", overflow: "hidden",
