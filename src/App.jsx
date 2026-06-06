@@ -376,11 +376,11 @@ function HomePage({ navigate }) {
         alignItems: "center", justifyContent: "center",
         position: "relative", overflow: "hidden",
         backgroundImage: `url('${IMG.heroBg}')`,
-        backgroundSize: "cover", backgroundPosition: "center",
+        backgroundSize: "cover", backgroundPosition: "center 60%",
         padding: "100px 1.5rem 3rem",
       }}>
-        {/* Medium overlay - background image visible but not too bright */}
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.30) 40%, rgba(0,0,0,0.58) 85%, rgba(0,0,0,0.72) 100%)" }} />
+        {/* Overlay - stage visible, not too dark at top */}
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.18) 40%, rgba(0,0,0,0.52) 85%, rgba(0,0,0,0.68) 100%)" }} />
 
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 820 }}>
           <div style={{ display: "inline-block", border: `1px solid ${THEME.gold}`, borderRadius: 999, padding: "6px 20px", marginBottom: 24, color: THEME.goldLight, fontSize: "0.85rem" }}>
