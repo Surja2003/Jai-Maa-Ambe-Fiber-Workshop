@@ -19,14 +19,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Hero section: mobile = tight to navbar, desktop = more breathing room */
+/* ── HERO SECTION: Mobile vs Desktop ── */
+
+/* Desktop default */
 .hero-section {
-  padding-top: 68px !important;
+  padding-top: 90px;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
 }
 
-@media (min-width: 768px) {
+/* Mobile: separate optimized layout */
+@media (max-width: 767px) {
   .hero-section {
-    padding-top: 90px !important;
+    padding-top: 78px !important;
+    /* Make image taller than section so Y-position works */
+    background-size: auto 160% !important;
+    /* Show wedding stage (lower part of image) at top */
+    background-position: center 72% !important;
+    justify-content: flex-start !important;
   }
 }
 

@@ -372,11 +372,10 @@ function HomePage({ navigate }) {
     <div>
       <section className="hero-section" style={{
         minHeight: "100vh", display: "flex", flexDirection: "column",
-        alignItems: "center", justifyContent: "flex-start",
+        alignItems: "center",
         position: "relative", overflow: "hidden",
         backgroundImage: `url('${IMG.heroBg}')`,
-        backgroundSize: "cover", backgroundPosition: "center 60%",
-        padding: "90px 1.5rem 3rem",
+        paddingLeft: "1.5rem", paddingRight: "1.5rem", paddingBottom: "3rem",
       }}>
         {/* Overlay */}
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.30) 40%, rgba(0,0,0,0.55) 85%, rgba(0,0,0,0.70) 100%)" }} />
