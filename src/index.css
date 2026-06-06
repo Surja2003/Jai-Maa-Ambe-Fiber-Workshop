@@ -32,16 +32,24 @@ body {
   object-position: center center;
 }
 
-/* Mobile: separate optimized layout */
+/* ── MOBILE: Separate optimized layout ── */
 @media (max-width: 767px) {
   .hero-section {
     padding-top: 78px !important;
     justify-content: flex-start !important;
   }
 
-  /* Show wedding stage (lower portion) instead of dark sky */
+  /*
+   * Make the img taller than the section (160vh) and push it UP (-30vh).
+   * The section has overflow:hidden so only the visible portion shows.
+   * This cuts off the dark sky (top ~18%) and shows only the wedding stage.
+   * object-fit:cover keeps the image sharp — no stretch, no blur.
+   */
   .hero-bg-img {
-    object-position: center 65% !important;
+    height: 160vh !important;
+    top: -30vh !important;
+    bottom: auto !important;
+    object-position: center center !important;
   }
 }
 
