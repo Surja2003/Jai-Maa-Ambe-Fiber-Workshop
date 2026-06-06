@@ -374,13 +374,25 @@ function HomePage({ navigate }) {
         minHeight: "100vh", display: "flex", flexDirection: "column",
         alignItems: "center",
         position: "relative", overflow: "hidden",
-        backgroundImage: `url('${IMG.heroBg}')`,
         paddingLeft: "1.5rem", paddingRight: "1.5rem", paddingBottom: "3rem",
       }}>
+        {/* Background image — object-fit:cover never stretches, only crops */}
+        <img
+          src={IMG.heroBg}
+          alt=""
+          aria-hidden="true"
+          className="hero-bg-img"
+          style={{
+            position: "absolute", inset: 0,
+            width: "100%", height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+          }}
+        />
         {/* Overlay */}
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.30) 40%, rgba(0,0,0,0.55) 85%, rgba(0,0,0,0.70) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.30) 40%, rgba(0,0,0,0.55) 85%, rgba(0,0,0,0.70) 100%)" }} />
 
-        <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 820 }}>
+        <div style={{ position: "relative", zIndex: 2, textAlign: "center", maxWidth: 820 }}>
           <div style={{ display: "inline-block", border: `1px solid ${THEME.gold}`, borderRadius: 999, padding: "6px 20px", marginBottom: 24, color: THEME.goldLight, fontSize: "0.85rem" }}>
             ✨ मुजफ्फरपुर की नंबर 1 वर्कशॉप
           </div>

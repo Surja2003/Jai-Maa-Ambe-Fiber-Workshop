@@ -24,20 +24,24 @@ body {
 /* Desktop default */
 .hero-section {
   padding-top: 90px;
-  background-size: cover;
-  background-position: center;
   justify-content: center;
+}
+
+/* Desktop: show center of image */
+.hero-bg-img {
+  object-position: center center;
 }
 
 /* Mobile: separate optimized layout */
 @media (max-width: 767px) {
   .hero-section {
     padding-top: 78px !important;
-    /* Make image taller than section so Y-position works */
-    background-size: auto 160% !important;
-    /* Show wedding stage (lower part of image) at top */
-    background-position: center 72% !important;
     justify-content: flex-start !important;
+  }
+
+  /* Show wedding stage (lower portion) instead of dark sky */
+  .hero-bg-img {
+    object-position: center 65% !important;
   }
 }
 
