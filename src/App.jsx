@@ -379,8 +379,8 @@ function HomePage({ navigate }) {
         backgroundSize: "cover", backgroundPosition: "center",
         padding: "100px 1.5rem 3rem",
       }}>
-        {/* Very light overlay - background image clearly visible */}
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.45) 85%, rgba(0,0,0,0.6) 100%)" }} />
+        {/* Medium overlay - background image visible but not too bright */}
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.30) 40%, rgba(0,0,0,0.58) 85%, rgba(0,0,0,0.72) 100%)" }} />
 
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 820 }}>
           <div style={{ display: "inline-block", border: `1px solid ${THEME.gold}`, borderRadius: 999, padding: "6px 20px", marginBottom: 24, color: THEME.goldLight, fontSize: "0.85rem" }}>
