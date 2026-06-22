@@ -6,7 +6,7 @@ Disallow: /src/
 Disallow: /.vite/
 
 # Sitemap
-Sitemap: https://jai-maa-ambe-fiber-workshop.vercel.app/sitemap.xml
+Sitemap: https://www.jaimaambe.in/sitemap.xml
 
 # Crawl-delay (optional)
 Crawl-delay: 10
