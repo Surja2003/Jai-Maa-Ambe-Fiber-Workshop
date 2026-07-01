@@ -14,7 +14,11 @@
     }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/fiber-work-muzaffarpur.html", "destination": "/fiber-work-muzaffarpur.html" },
+    { "source": "/fiber-work-bihar.html", "destination": "/fiber-work-bihar.html" },
+    { "source": "/((?!assets/|sitemap\\.xml|robots\\.txt|fiber-work-muzaffarpur\\.html|fiber-work-bihar\\.html).*)$", "destination": "/index.html" }
   ],
   "headers": [
     {
