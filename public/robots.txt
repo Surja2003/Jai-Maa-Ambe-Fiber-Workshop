@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /fiber-work-muzaffarpur.html
+Allow: /fiber-work-bihar.html
 
 # Block build artifacts
 Disallow: /src/
@@ -8,5 +10,13 @@ Disallow: /.vite/
 # Sitemap
 Sitemap: https://www.jaimaambe.in/sitemap.xml
 
-# Crawl-delay (optional)
-Crawl-delay: 10
+# Crawl-delay
+Crawl-delay: 2
+
+# Googlebot — explicit permissions
+User-agent: Googlebot
+Allow: /
+Allow: /fiber-work-muzaffarpur.html
+Allow: /fiber-work-bihar.html
+Disallow: /src/
+Disallow: /.vite/

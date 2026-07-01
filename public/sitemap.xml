@@ -5,20 +5,20 @@
 
   <url>
     <loc>https://www.jaimaambe.in/</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="hi" href="https://www.jaimaambe.in/"/>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.jaimaambe.in/"/>
     <image:image>
       <image:loc>https://www.jaimaambe.in/assets/logo.png</image:loc>
-      <image:title>जय माँ अम्बे फाइबर वर्कशॉप लोगो | Jai Maa Ambe Fiber Workshop Logo Muzaffarpur</image:title>
-      <image:caption>माँ अम्बे फाइबर वर्कशॉप, मुजफ्फरपुर, बिहार | Maa Ambe Fiber Workshop Muzaffarpur Bihar</image:caption>
+      <image:title>जय माँ अम्बे फाइबर वर्कशॉप लोगो | Jai Maa Ambe Fiber Workshop Logo Muzaffarpur | Fiber Work Muzaffarpur Bihar</image:title>
+      <image:caption>माँ अम्बे फाइबर वर्कशॉप, मुजफ्फरपुर, बिहार | Maa Ambe Fiber Workshop Muzaffarpur Bihar | Best fiber work in Bihar</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.jaimaambe.in/assets/WhatsApp%20Image%202026-06-01%20at%2019.41.02.jpeg</image:loc>
-      <image:title>शादी स्टेज डेकोरेशन — जय माँ अम्बे फाइबर वर्कशॉप मुजफ्फरपुर | Jai Maa Ambe wedding stage Muzaffarpur</image:title>
-      <image:caption>Wedding stage decoration by Jai Maa Ambe Fiber Workshop, Muzaffarpur Bihar. माँ अम्बे शादी स्टेज.</image:caption>
+      <image:title>शादी स्टेज डेकोरेशन — जय माँ अम्बे फाइबर वर्कशॉप मुजफ्फरपुर | Jai Maa Ambe wedding stage Muzaffarpur | fiber work muzaffarpur</image:title>
+      <image:caption>Wedding stage decoration by Jai Maa Ambe Fiber Workshop, Muzaffarpur Bihar. माँ अम्बे शादी स्टेज. Fiber work Muzaffarpur Bihar.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.jaimaambe.in/assets/WhatsApp%20Image%202026-06-01%20at%2019.40.59%20(1).jpeg</image:loc>
@@ -26,7 +26,7 @@
     </image:image>
     <image:image>
       <image:loc>https://www.jaimaambe.in/assets/WhatsApp%20Image%202026-06-01%20at%2019.40.52%20(1).jpeg</image:loc>
-      <image:title>फाइबर प्लेग्राउंड — माँ अम्बे फाइबर | Maa Ambe fiber playground Muzaffarpur Bihar</image:title>
+      <image:title>फाइबर प्लेग्राउंड — माँ अम्बे फाइबर | Maa Ambe fiber playground Muzaffarpur Bihar | fiber work bihar</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.jaimaambe.in/assets/owner.jpeg</image:loc>
@@ -35,15 +35,31 @@
   </url>
 
   <url>
+    <loc>https://www.jaimaambe.in/fiber-work-muzaffarpur.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.jaimaambe.in/fiber-work-muzaffarpur.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.jaimaambe.in/fiber-work-bihar.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.jaimaambe.in/fiber-work-bihar.html"/>
+  </url>
+
+  <url>
     <loc>https://www.jaimaambe.in/#services</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.jaimaambe.in/#gallery</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -70,7 +86,7 @@
 
   <url>
     <loc>https://www.jaimaambe.in/#about</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -82,16 +98,17 @@
 
   <url>
     <loc>https://www.jaimaambe.in/#career</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.jaimaambe.in/#contact</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
 </urlset>
+
